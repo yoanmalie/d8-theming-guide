@@ -108,7 +108,7 @@ Classy will be a `base theme` which *Bartik* and *Seven* will extend from.
 
 [Add classy.info.yml to core, set Classy as base theme for Bartik and Seven](https://www.drupal.org/node/2329501)
 
-As of 02/11/2014, **Classy** got commit to Drupal 8 core by Dries. The change record can be found [here](https://www.drupal.org/node/2337467). 
+As of 02/11/2014, **Classy** got into to Drupal 8 core by Dries. The change record can be found [here](https://www.drupal.org/node/2337467). 
 
 ### Coding standards
 
