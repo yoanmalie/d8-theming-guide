@@ -143,10 +143,6 @@ BEM (Block Element Modifier) is a naming convention for CSS Selectors.
 
 Source: [Smashing Magazine](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
 
-Let's look into an example:
-
-**Button:**
-
 ## Theme engines
 
 Inside the `core/themes` lives a fourth folder (besides `bartik`, `seven` and `stark`), called `engines`. This folder contains the theme engines. In Drupal 8, the default template engine is **Twig**. The default template engine from Drupal 7, PHPTemplate, does still exist. Although it's not recommended to continue using the engine, it might be useful when you're migrating your Drupal 7 site to Drupal 8. 
