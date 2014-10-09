@@ -73,6 +73,8 @@ You might remember these three themes from Drupal 7. But wait, there's more ...
 
 - **classy**: [[meta] Results of Drupalcon Austin's Consensus Banana](https://www.drupal.org/node/2289511): At DrupalCon Austin (2014) the need for a new core theme came up.
 
+![An overview of the core themes](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/theme-overview.png)
+
 ### Bartik
 
 *Bartik* was introduced in Drupal 7 as a new, clean and simple theme. The theme has some new cool features in Drupal 8 and is also completely responsive. 
