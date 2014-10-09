@@ -1,5 +1,6 @@
 name: Awesome Theme
 description: 'An awesome D8 theme.'
+base theme: classy
 package: Custom
 type: theme
 version: 1.0
