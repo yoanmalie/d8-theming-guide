@@ -133,7 +133,7 @@ Drupal 8 uses the **SMACSS** system to conceptually categorize CSS rules.
 
 #### BEM
 
-BEM (Block Element Modifier) is a naming convention for CSS Selectors.
+BEM (Block Element Modifier) is a naming convention.
 
 `.block__element--modifier`
 
