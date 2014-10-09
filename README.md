@@ -73,6 +73,8 @@ You might remember these three themes from Drupal 7. But wait, there's more ...
 
 - **classy**: [[meta] Results of Drupalcon Austin's Consensus Banana](https://www.drupal.org/node/2289511): At DrupalCon Austin (2014) the need for a new core theme came up.
 
+![An overview of the core themes](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/theme-overview.png)
+
 ### Bartik
 
 *Bartik* was introduced in Drupal 7 as a new, clean and simple theme. The theme has some new cool features in Drupal 8 and is also completely responsive. 
@@ -125,16 +127,21 @@ Drupal 8 uses the **SMACSS** system to conceptually categorize CSS rules.
 
 1. Base
 2. Layout
-3. Component - *SMACSS: modules*
+3. Component (The official **SMACSS** theminoly for this is *modules*. Since *modules* have a different meaning in Drupal, this component was rename to component, to avoid confusion.)
 4. State
 5. Theme
 
 #### BEM
 
-`block__element--modifier`
+BEM (Block Element Modifier) is a naming convention for CSS Selectors.
 
+`.block__element--modifier`
 
+- A **block** is an independent entity with its own meaning that represents a piece of interface on a page.
+- An **element** is a part of a block, tied to it semantically and functionally. It has no meaning outside of the block it belongs to. Not all blocks have elements.
+- **Modifiers** are flags set on blocks or elements; they define properties or states. They may be boolean (for example, visible: true or false) or key-value pairs (size: large, medium, small) — somewhat similar to HTML attributes, but not exactly the same. Multiple modifiers are allowed on a single item if they represent different properties.
 
+Source: [Smashing Magazine](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
 
 ## Theme engines
 
