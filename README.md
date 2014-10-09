@@ -189,6 +189,8 @@ A quick tutorial to get started with Twig template files.
 
 [Twig autoescape enabled](https://www.drupal.org/node/2296163) by default. This means that every string printed from a Twig template (anything between `{{ }}`) gets escaped.
 
+> Escape a string means to reduce ambiguity characters in a string. 
+
 ### Printing a variable
 
 To print a simple variable in a template, use `{{ variable }}`. It's possible to let the varible go through a filter before printing it. This can be done using `{{ varible|filter }}`. 
