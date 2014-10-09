@@ -185,23 +185,41 @@ Twig is a modern template engine for PHP. All of the `theme_*` functions and PHP
 
 A quick tutorial to get started with Twig template files.
 
+### Twig autoescape enabled
+
+[Twig autoescape enabled](https://www.drupal.org/node/2296163) by default. This means that every string printed from a Twig template (anything between `{{ }}`) gets escaped.
+
 ### Printing a variable
 
 To print a simple variable in a template, use `{{ variable }}`. It's possible to let the varible go through a filter before printing it. This can be done using `{{ varible|filter }}`. 
 
 #### Twig filters
 
-A complete list of default Twig filters [can be found here](http://twig.sensiolabs.org/doc/filters/index.html). Drupal has added some extra filters:
+- `|length`, returns the number of items of a sequence or mapping, or the length of a string.
+- `|lower`, converts a value to lowercase.
+- `|upper`, converts a value to uppercase.
+- …
+
+A complete list of default Twig filters [can be found here](http://twig.sensiolabs.org/doc/filters/index.html).
+
+#### Drupal filters
+
+Drupal has added some extra filters available to use in a template.
 
 ##### Translation filters
 
 - `t` will run the variable through the Drupal `t()` function, which will return a translated string. An example:
 `<a href="{{ url('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo"></a>`
 
-> The "raw" filter is not detectable when parsing "trans" tags. To detect which prefix must be used for translation (@, !, %), the "raw" filter is cloned and given an identifiable names. These filters should only be used in "trans" tags.
-
 - `passthrough` 
 - `placeholder`
+
+To safely escape all of the Twig variables detected in a {% trans %} tag, the variables are sent with an `@` prefix by default. To pass-through a variable (**!**) or use as a placeholder (**%**), the `passthrough` or `placeholder` filters are used.
+
+- **passthrough** gets no sanitization or formatting and should only be used for text that has already been prepared for HTML display.
+- **placeholder** gets escaped to HTML and formatted using [drupal_placeholder()](https://api.drupal.org/api/drupal/core%21includes%21bootstrap.inc/function/drupal_placeholder/8), which makes it display as <em>emphasized</em> text.
+
+If the value of that variable needs to be passed through (!) or used as a placeholder (%), modify the variable with these following Twig filters |passthrough and |placeholder:
 
 ##### Replace twig's escape filter with our own.
 
@@ -219,6 +237,34 @@ A complete list of default Twig filters [can be found here](http://twig.sensiola
 
 - `clean_class` 
 - `clean_id`
+
+#### Translations
+
+The Twig i18n extension allows marking parts of a template as translatable. Let's start of with an easy example:
+
+	`{%trans %} Hello world {% endtrans %}`
+
+It's possible to embed a variable in a translatable string, using the `{{ variable }}` syntax.
+
+	`{%trans %} Hello {{ name }} {% endtrans %}`
+
+To apply a filter to a variable, used in a translatable block you first need to assign the result to a variable.
+
+	{% set name = name|capitalize %}
+
+	{% trans %}
+    	  Hello {{ name }}!
+	{% endtrans %}
+
+A translatable string can be pluralized. Implementing a `{% plural ... %}` switch makes this possible.
+
+	{% trans %}
+	  Hello star.
+	{% plural count %}
+	  Hello {{ count }} stars.
+	{% endtrans %}
+
+[@todo:] {% trans %} debugging
 
 ## The themes directory
 
