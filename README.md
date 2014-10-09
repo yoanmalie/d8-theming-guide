@@ -13,6 +13,8 @@ If you ever want to get in touch, feel free to contact me.
 
 ## Licence
 
+[Creative Commons, Attribution-NonCommercial-ShareAlike 4.0] International(http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 ![http://creativecommons.org/licenses/by-nc-sa/4.0/](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
 ## Typos
