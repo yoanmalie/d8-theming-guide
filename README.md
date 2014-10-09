@@ -205,11 +205,11 @@ A complete list of default Twig filters [can be found here](http://twig.sensiola
 
 ##### Replace twig's escape filter with our own.
 
-- `drupal_escape` will run the string through [twig_drupal_escape_filter](https://api.drupal.org/api/drupal/core%21themes%21engines%21twig%21twig.engine/function/twig_drupal_escape_filter/8)
+- `drupal_escape` is a replacement function for Twig's escape filter. See [twig_drupal_escape_filter](https://api.drupal.org/api/drupal/core%21themes%21engines%21twig%21twig.engine/function/twig_drupal_escape_filter/8)
 
 ##### Implements safe joining.
 
-- `safe_join` to safely joins several strings together. [twig_drupal_join_filter](https://api.drupal.org/api/drupal/core%21themes%21engines%21twig%21twig.engine/function/twig_drupal_join_filter/8)
+- `safe_join` to safely joins several strings together. See [twig_drupal_join_filter](https://api.drupal.org/api/drupal/core%21themes%21engines%21twig%21twig.engine/function/twig_drupal_join_filter/8)
 
 ##### Array filters
 
