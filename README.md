@@ -4,7 +4,7 @@
 
 Hi, my name is Sander. I'm a web developer from Belgium.
 
-If you ever want to get in touch, feel free to contact me. By the way, I'm at **DrupalCon Amsterdam** at the moment!
+If you ever want to get in touch, feel free to contact me.
 
 - [Drupal.org](https://www.drupal.org/u/sqndr)
 - [Twitter](http://twitter.com/sqndr)
@@ -13,18 +13,17 @@ If you ever want to get in touch, feel free to contact me. By the way, I'm at **
 
 ## Typos
 
-Since this text is constantly in progress - it still contains some typos. Sorry about that :)
+Since this text is constantly in progress. This means it still contains some typos and spelling mistakes.
 
-## Demo code
+## Example theme code
 
-Recently, I've added some example code in the repo to get you started. The example theme can be found in the `src` folder. Have fun with. Happy Drupal 8 theming. 
+Recently, I added some example code in the repo to get you started. The example (awesome) theme can be found in the `src` folder. Have fun with it. Happy Drupal 8 theming. 
 
 > Get Twiggy with it!
 
-
 ## Introduction
 
-Drupal 8 is going to be a huge change for the entire community. In order to get front-end developers ready for Drupal 8, I started this theming guide. It contains an overview of how you can build a Drupal 8 theme, using modern front-end tools. If you find any mistakes or outdated documentation, feel free to add a pull request.
+Drupal 8 is going to be a huge change for the entire community. In order to get front-end developers ready for Drupal 8, I created this theming guide. It contains an overview of how you can build a Drupal 8 theme, using modern front-end tools. If you find any mistakes or outdated documentation, feel free to add a pull request.
 
 ## Table of content
 
@@ -38,7 +37,7 @@ Let's kick of with some major changes that you, as a Drupal themer, must be awar
 
 - [WAI-ARIA Roles](https://www.drupal.org/node/1179668) are added. They are a set of roles, states, and properties, which can be applied to markup to provide rich semantics, increasing accessibility and interoperability. Although WAI-ARIA properties were not valid in xhtml 1.0, they are valid in HTML5, and can therefore be applied in the markup of Drupal 8. By using the role attribute with an HTML element, authors can provide more information about the purpose of components on the page.
 
-- `<DIV ID="BAD-PRACTICE">...</DIV>`. Drupal 8 now has 75% less ID's than the Drupal 7 CSS! **Kill all the #ids**!
+- `<DIV ID="BAD-PRACTICE">...</DIV>`. Drupal 8 now has 75% less ID's than the Drupal 7 CSS! In other words: **kill all the #ids**!
 
 - [The CSS (File) Structure](https://www.drupal.org/node/1887918) is based on SMACSS & BEM.
 
@@ -64,7 +63,7 @@ Read more on *classy*, a new core theme below.
 
 ## Drupal core themes
 
-Drupal core themes live inside `core/themes`. Inside this folder we can find the three (at the moment) Drupal 8 core themes:
+Drupal **core** themes live inside `core/themes`. Inside this folder we can find the four Drupal 8 core themes:
 
 - **bartik**: *A flexible, recolorable theme with many regions and a responsive, mobile-first layout.*
 - **seven**: *The default administration theme for Drupal 8 was designed with clean lines, simple blocks, and sans-serif font to emphasize the tools and tasks at hand.*
@@ -108,7 +107,7 @@ Classy will be a `base theme` which *Bartik* and *Seven* will extend from.
 
 [Add classy.info.yml to core, set Classy as base theme for Bartik and Seven](https://www.drupal.org/node/2329501)
 
-As of 02/11/2014, **Classy** got into to Drupal 8 core by Dries. The change record can be found [here](https://www.drupal.org/node/2337467). 
+At DrupalCon Amsterdam, the **classy.info.yml** got commited into Drupal 8 core by Dries. The change record can be found [here](https://www.drupal.org/node/2337467).
 
 ### Coding standards
 
