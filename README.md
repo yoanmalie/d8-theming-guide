@@ -266,6 +266,36 @@ A translatable string can be pluralized. Implementing a `{% plural ... %}` switc
 
 [@todo:] {% trans %} debugging
 
+#### Comments
+
+`{# Comments go inside these brackets. #}`
+
+#### Functions
+
+An `if` function.
+
+	{% if site_slogan %}
+	  <div class="site-slogan">{{ site_slogan }}</div>
+	{% endif %}
+
+A `for` function. The output for this is `0, 1, 2, 3`.
+
+> The `range` function returns a list containing an arithmetic progression of integers.
+
+	{% for i in range(0, 3) %}
+	  {{ i }},
+	{% endfor %}
+
+Another example, from the `field--node--title.html.twig` template:
+
+	{%- for item in items -%}
+	  {{ item.content }}
+	{%- endfor -%}
+
+#### Create a Twig variable
+
+Sometimes it might be useful to define variables in a template file. `{% set foo=“bar” %}` declaires a variable `foo` and assigns the value `bar` to it. Later in the template, the variable can be printed out using `{{ foo }}`. 
+
 ## The themes directory
 
 All right. Now is the time to get really excited. We're about to create a Drupal 8 theme! The question that raises is: where should this theme be located, where should I put the files?
@@ -287,8 +317,8 @@ Let's create an `example` directory inside `themes/custom`, resulting in `themes
 
 When creating your theme, you have two possibilities. You can create a theme…
 
-1. using **Classy** as base theme. This will result in some default classes and markup in your template files (since the template files from **Classy** will be used). 
-2. without **Classy** as base theme. No default markup and classes will be added to the template files. This way, you have full control of all the markup and classes.
+1. using **Classy** as base theme. This will result in some default classes and markup in your template files (since the template files from **Classy** will be used). Of course, you can still override these template files with your own. 
+2. without **Classy** as base theme. No default markup and classes will be added to the template files. This way, you have full control of all the markup and classes. 
 
 In the following example, we have two custom themes. The first theme, *Awesome*, uses **Classy** as a base theme. The second theme, *Kitten*, doesn't use **Classy** as a base theme.
 
@@ -330,7 +360,7 @@ The version of Drupal core the theme requires.
 
 	base theme: classy
 
-The line above gives you the power to extend from a base theme.
+The line above gives you the power to extend from a base theme. This line can be found in both `bartik.info.yml` and  `seven.info.yml`, since these two core themes extend **Classy**.
 
 ##### *.info.yml
 
@@ -338,6 +368,7 @@ To wrap things up, this is our `.info.yml` file so far:
 
 	name: Awesome Theme
 	description: 'An awesome D8 theme.'
+	base theme: classy
 	package: Custom
 	type: theme
 	version: 1.0
