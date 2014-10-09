@@ -83,11 +83,9 @@ You might remember these three themes from Drupal 7. But wait, there's more ...
 
 ### Seven
 
-*Seven* was also introduced in Drupal 7. It is the default administrative theme. The theme was created to improve the Drupal 7 user experience.
+*Seven* was also introduced in Drupal 7. It is the default administrative theme. The theme was created to improve the Drupal 7 user experience. For Drupal 8, [a style guide for Seven](https://groups.drupal.org/node/283223) was introduced to improve this experience even more and give it a refreshing look.
 
-> For Drupal 8, [a style guide for Seven](https://groups.drupal.org/node/283223) was introduced.
-
-> A sad thing about the style guide was that the font (Source Sans) could not make it into core [due to licence issues](https://www.drupal.org/node/1986082). The default font family used in the Seven (and Bartik theme) is **Lucida Grande**. Sadly the style guide never got an update. The licensing issue is still a thing. If you want to get involved, jump over to [https://www.drupal.org/node/2010902](https://www.drupal.org/node/2010902)
+> Some people might be wondering if this theme should be renamed to `eight`? The answer is **no**.
 
 ![Seven screenshot](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/seven.png)
 
