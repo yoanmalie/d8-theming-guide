@@ -422,17 +422,17 @@ Inside the html:
 
 In Drupal 8, drupal.base.css has been replaced with normalize.css ([see this change record](https://www.drupal.org/node/2168417)). If you want to include a different version of normalize.css, you can override this file.
 
-    # Remove a CSS file:​
-    stylesheets-override:
-     	- normalize.css
+	# Remove a CSS file:​
+	stylesheets-override:
+	  - normalize.css
  
 #### Removing stylesheets
 
 Alternatively, we can also completely remove a css file.
 
-    # Remove a CSS file:​
-    stylesheets-remove:
-     	- normalize.css     	
+	# Remove a CSS file:​
+	stylesheets-remove:
+	  - normalize.css     	
  	
 #### Regions
 
@@ -564,7 +564,9 @@ To get a good example, let look at `bartik.breakpoints.yml`:
 
 ## Theme functions
 
-This section is dedicated to all people who have been dealing with `theme`-functions in Drupal 7. All of the `theme`-function are gone and have been replaced with template files. The next section goes into detail about how you can modify and override them. It also handles how you can complety control all the classes add to the layout. 
+This section is dedicated to all people who have been dealing with `theme`-functions in Drupal 7. All of the `theme`-function are gone and have been replaced with template files. The next section goes into detail about how you can modify and override them. It also handles how you can complety control all the classes add to the layout.
+
+> As you're reading this, it might be possible that some of the theme_ functions still exists. The goal would be to have all of them removed completly by a first release canditate. 
 
 ![Awesome](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/minions.gif)
 
@@ -583,8 +585,8 @@ The `theme`-functions are gone. Almost all the core themes (and modules) now con
 An **awesome** new feature from the Twig engine is the debug tool. It allows you to trace where the template comes from. To enable Twig Debugging, all you have to do is set the `debug` variable in the `twig.config ` to `true`. Navigate to `sites/default/services.yml` to change the it:
 
 	parameters:
-  		twig.config:
-    		debug: false
+	  twig.config:
+	  debug: false
     		
 [@todo:]
 - How to find the active template
