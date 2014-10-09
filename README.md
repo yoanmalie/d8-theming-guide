@@ -187,7 +187,7 @@ A quick tutorial to get started with Twig template files.
 
 ### Printing a variable
 
-To print a simple variable in a template, use `{{ variable }}`. It's possible to let the varible go trough a filter before printing it. This can be done using `{{ varible|filter}}`. 
+To print a simple variable in a template, use `{{ variable }}`. It's possible to let the varible go through a filter before printing it. This can be done using `{{ varible|filter }}`. 
 
 #### Twig filters
 
