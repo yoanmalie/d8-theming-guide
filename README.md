@@ -180,6 +180,46 @@ Twig is a modern template engine for PHP. All of the `theme_*` functions and PHP
 
 - Although the syntax is very easy to read and understand, it's a new syntax you have to learn before getting started.
 
+
+## Getting started with Twig
+
+A quick tutorial to get started with Twig template files.
+
+### Printing a variable
+
+To print a simple variable in a template, use `{{ variable }}`. It's possible to let the varible go trough a filter before printing it. This can be done using `{{ varible|filter}}`. 
+
+#### Twig filters
+
+A complete list of default Twig filters [can be found here](http://twig.sensiolabs.org/doc/filters/index.html). Drupal has added some extra filters:
+
+##### Translation filters
+
+- `t` will run the variable through the Drupal `t()` function, which will return a translated string. An example:
+`<a href="{{ url('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo"></a>`
+
+> The "raw" filter is not detectable when parsing "trans" tags. To detect which prefix must be used for translation (@, !, %), the "raw" filter is cloned and given an identifiable names. These filters should only be used in "trans" tags.
+
+- `passthrough` 
+- `placeholder`
+
+##### Replace twig's escape filter with our own.
+
+- `drupal_escape` will run the string through [twig_drupal_escape_filter](https://api.drupal.org/api/drupal/core%21themes%21engines%21twig%21twig.engine/function/twig_drupal_escape_filter/8)
+
+##### Implements safe joining.
+
+- `safe_join` to safely joins several strings together. [twig_drupal_join_filter](https://api.drupal.org/api/drupal/core%21themes%21engines%21twig%21twig.engine/function/twig_drupal_join_filter/8)
+
+##### Array filters
+
+- `without` creates a copy of the renderable array and removes child elements by key specified through filter's arguments. The copy can be printed without these elements. The original renderable array is still available and can be used to print child elements in their entirety in the twig template.
+
+##### CSS class and ID filters.
+
+- `clean_class` 
+- `clean_id`
+
 ## The themes directory
 
 All right. Now is the time to get really excited. We're about to create a Drupal 8 theme! The question that raises is: where should this theme be located, where should I put the files?
