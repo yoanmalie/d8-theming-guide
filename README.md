@@ -244,7 +244,7 @@ The version of Drupal core the theme requires.
 
 	base theme: classy
 
-The lines above gives you the power to extend from a base theme.
+The line above gives you the power to extend from a base theme.
 
 ##### *.info.yml
 
