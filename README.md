@@ -418,7 +418,7 @@ To get a good example, let look at `bartik.breakpoints.yml`:
 
 This section is dedicated to all people who have been dealing with `theme`-functions in Drupal 7. All of the `theme`-function are gone and have been replaced with template files. The next section goes into detail about how you can modify and override them. It also handles how you can complety control all the classes add to the layout. 
 
-![Mions celebrating]()
+![Awesome](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/minions.gif)
 
 ## Template files (Twig)
 
