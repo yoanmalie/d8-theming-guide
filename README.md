@@ -11,12 +11,6 @@ If you ever want to get in touch, feel free to contact me.
 
 ![With more than 200 new features and improvements, the upcoming release of the world’s leading open source web content management platform will win you over.](https://www.drupal.org/sites/all/modules/drupalorg/drupalorg/images/d8.svg)
 
-## Licence
-
-[Creative Commons, Attribution-NonCommercial-ShareAlike 4.0] International(http://creativecommons.org/licenses/by-nc-sa/4.0/)
-
-![http://creativecommons.org/licenses/by-nc-sa/4.0/](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
-
 ## Typos
 
 Since this text is constantly in progress. This means it still contains some typos and spelling mistakes.
