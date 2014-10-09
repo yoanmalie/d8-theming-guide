@@ -195,7 +195,20 @@ In Drupal 8, this location has changed. Custom and contrib themes now live in `d
 
 ### Create your custom theme directory
 
-Let's create an `example` directory inside `themes/custom`, resulting in `themes/custom/example`. Inside this directory, all the code for our custom theme will live.  
+Let's create an `example` directory inside `themes/custom`, resulting in `themes/custom/example`. Inside this directory, all the code for our custom theme will live.
+
+## Classy
+
+When creating your theme, you have two possibilities. You can create a theme…
+
+1. using **Classy** as base theme. This will result in some default classes and markup in your template files (since the template files from **Classy** will be used). 
+2. without **Classy** as base theme. No default markup and classes will be added to the template files. This way, you have full control of all the markup and classes.
+
+In the following example, we have two custom themes. The first theme, *Awesome*, uses **Classy** as a base theme. The second theme, *Kitten*, doesn't use **Classy** as a base theme.
+
+> In order to extend from **Classy** in a custom theme, check the documention below (# Using a base theme).
+
+![Awesome and Kitten theme examples](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/custom-theme.png)
 
 ## Creating an info file
 
@@ -205,19 +218,19 @@ Again, if you're familiar with Drupal 7 theming, your first idea might be to sta
 
 	name: Awesome Theme
 	
-Fairly simple. This is the name of your theme. It's the name that also appears on the *Appearance* page, where you can activate your theme.
+Fairly simple. This is the name of the theme. It's the name that also appears on the *Appearance* page, where you can activate your theme.
 	
 	description: 'An awesome D8 theme.'
 
-A theme description. This description is also displayed on the *Appearance* page. For the core themes, this package is of course `core`.
+A theme description. This description is also displayed on the *Appearance* page.
 
 	package: Custom
 	
-The package in which your theme lives.
+The package in which your theme lives. For the core themes, this package is of course `core`.
 	
 	type: theme
 
-Since the `info.yml` files are used for besides themes also used for modules and profiles, this line lets Drupal know what it's dealing with.
+Since the `info.yml` files are used for besides themes also used for modules and profiles, this line lets Drupal know if it's a theme, module or a profile.
 	
 	version: 1.0
 
@@ -225,7 +238,13 @@ The version of the theme.
 	
 	core: 8.x
 	
-The version of Drupal core the theme requires. 
+The version of Drupal core the theme requires.
+
+##### Using a base theme
+
+	base theme: classy
+
+The lines above gives you the power to extend from a base theme.
 
 ##### *.info.yml
 
