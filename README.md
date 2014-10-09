@@ -47,7 +47,7 @@ Let's kick of with some major changes that you, as a Drupal themer, must be awar
 This is important because in a default Drupal 8 installation, CSS and JS aggregation is enabled. On your local development environment, you "might" want to disable this. 
 
 - [A completely new theme/template system: Twig](https://www.drupal.org/node/1831138)
-Twig is a completely new theme/template system. This means the `theme_*` functions and PHP-based `*.tpl.php` files have been completely replace in D8.
+Twig is a completely new theme/template system. This means the `theme_*` functions and PHP-based `*.tpl.php` files have been completely replaced in D8.
 
 - [Drupal 8 does not support browsers that do not support SVG](https://www.drupal.org/node/2298227)
 Drupal 8 uses SVG in place of PNG to provide resolution independent icons in the admin UI. No effort is made to cater for browsers that do not support SVG. This includes IE8 and below and Android Browser 2.3 and below.
