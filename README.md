@@ -221,8 +221,6 @@ To safely escape all of the Twig variables detected in a {% trans %} tag, the va
 - **passthrough** gets no sanitization or formatting and should only be used for text that has already been prepared for HTML display.
 - **placeholder** gets escaped to HTML and formatted using [drupal_placeholder()](https://api.drupal.org/api/drupal/core%21includes%21bootstrap.inc/function/drupal_placeholder/8), which makes it display as <em>emphasized</em> text.
 
-If the value of that variable needs to be passed through (!) or used as a placeholder (%), modify the variable with these following Twig filters |passthrough and |placeholder:
-
 ##### Replace twig's escape filter with our own.
 
 - `drupal_escape` is a replacement function for Twig's escape filter. See [twig_drupal_escape_filter](https://api.drupal.org/api/drupal/core%21themes%21engines%21twig%21twig.engine/function/twig_drupal_escape_filter/8)
