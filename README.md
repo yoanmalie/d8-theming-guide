@@ -260,13 +260,13 @@ It's of course important to know how to add stylesheets to your theme. Let's add
 
 	# Adding styles.css to our theme.
 	stylesheets:
-		all:
-			- css/styles.css
-			
+	  all:
+	    - css/styles.css
+	
 > In Drupal 7, this could be achieved by adding the following line:  
 	
 	stylesheets[all][] = css/style.css
-			
+
 The css file is now added. The `all` keyword stands for the media tag inside the html `link` element that is used to add stylesheets:
 
 	<link rel="stylesheet" href="[stylesheet]" media="all" />
@@ -275,9 +275,9 @@ So ... now that you know this, it's very easy to add a print stylesheet to our t
 
 	# Adding a print stylesheet to our theme.
 	stylesheets:
-		print:
-			- css/print.css
-					
+	  print:
+ 	    - css/print.css
+
 Inside the html:
 
 	<link rel="stylesheet" href="[stylesheet]" media="print" />
@@ -304,10 +304,10 @@ Regions can be defined using the `regions` tag. Here is an example where 3 regio
 
 	# Regions
 	regions:
-		header: 'Header'
-		content: 'Content'
-		footer: 'Footer'
-		
+	  header: 'Header'
+	  content: 'Content'
+	  footer: 'Footer'
+	
 #### Regions hidden
 
 The `regions_hidden` can be applied to any previous defined *regions*. Regions with this attribute will not show up on the block administration page. This means they can't have blocks assigned to them by ordinary mechanisms. For example, Drupal uses this feature to protect the special 'page_top' and 'page_bottom' regions from adventurous themers. This can be used by module writers and theme writers to protect a given region from having unexpected content inserted into the output. The `seven.info.yml` contains this tag, in order to *hide* the 'Sidebar First' region.
@@ -345,11 +345,11 @@ This includes our the custom javascript and the dependencies into our theme. In 
 
 	(function ($) {
   	  "use strict"
-  	    Drupal.behaviors.mymodule = {
-          attach: function (context, settings) {
-            $('main').once('awesome').append('<p>Hello world</p>');
-          }
-  	    };
+  	  Drupal.behaviors.mymodule = {
+            attach: function (context, settings) {
+              $('main').once('awesome').append('<p>Hello world</p>');
+            }
+  	  };
 	}(jQuery));
 	
 Let's have a quick look at what this does.
@@ -359,7 +359,7 @@ The behavior has to have a unique namespace. In the example; the namespace is `a
 
 ### File-closure
 
-All of the javascript code **must** be declared inside a closure wrapping the whole file. This closure **must** be in strict mode (see below).
+All of the javascript code **must** be declared inside a closure wrapping the whole file. This closure **must** be in strict mode. 
 
 	(function () {
   	  "use strict";
@@ -375,7 +375,6 @@ The `"use strict"` directive is new in JavaScript 1.8.5 and ignored by previous 
 > As of Drupal 8, we use ESLint to make sure our JavaScript code is consistent and free from syntax error and leaking variables and that it can be properly minified.
 
 [More on ESLint](https://www.drupal.org/node/1955232)
-
 
 ## Breakpoints
 
