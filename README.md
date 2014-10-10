@@ -467,8 +467,10 @@ Let's add some custom javascript to our theme. Our script will location in the `
 	    - core/drupal
 	    - core/jquery
 	    - core/jquery.once
+
+> We need `core/drupal` in order to take advantage of the `Drupal.behaviors`. To include the Drupal core version of jQuery, we add `core/jquery`. The final dependency is `core/jquery.once`, a jQuery plugin allowing to only apply a function once to an element.
 	    
-Back in our `awesome.info.yml` file, we now add the following lines, to include our new *library* into our theme.
+Back in our `awesome.info.yml` file, we now add the following lines, to include the new declared *library* into our theme.
 
 	libraries:
 	  - awesome/base
@@ -488,9 +490,9 @@ This includes our the custom javascript and the dependencies into our theme. In 
 	
 Let's have a quick look at what this does.
 	
-The behavior has to have a unique namespace. In the example; the namespace is `awesome` (part of `Drupal.behaviors.awesome`). The `context` variable is the part of the page for which this applies.  The `settings` variable is used to pass information from the PHP code to the javascript. Next is some custom code that creates a `p`aragraph-tag, with the text *Hello world*, and appends it to the `main`tag. Using the `.once(awesome)` will make sure the code only runs once. It adds a `processed`- class to the `main` tag (`<main role="main" class="awesome-processed">`) in order to accomplish this.
+The behavior has to have a unique namespace. In the example the namespace is `awesome` (`Drupal.behaviors.awesome`). The `context` variable is the part of the page for which this applies. This is especially useful when working with AJAX.  The `settings` variable is used to pass information from the PHP code to the javascript. Next is some custom code that creates a `p`aragraph-tag, with the text *Hello world*, and appends it to the `main`-tag. Using the `.once('awesome')` will make sure the code only runs once. It adds a `processed`- class to the `main` tag (`<main role="main" class="awesome-processed">`) in order to accomplish this.
 
-Some libraries both have javascript (js) and stylesheets (css). It's possible to include these stylesheets as well. As an example, here's how to include [Picker](http://formstone.it/components/picker) (version 3.1.0) into the theme. Most of the parameters are the same. Using the `remote` parameter, allows you to define an external link to the library. 
+Some libraries both have javascript (js) and stylesheets (css). It's possible to include these stylesheets as well. As an example, here's how to include [Picker](http://formstone.it/components/picker) (version 3.1.0) into the `awesome` theme. Most of the parameters are the same, but this time we add a `remote` and `css` tag. Using the `remote` parameter, allows you to define an external link to the library. The `css` tag includes the css file from the library.
 
 	picker:
 	  version: 3.1.0
@@ -501,7 +503,6 @@ Some libraries both have javascript (js) and stylesheets (css). It's possible to
 	    lib/picker/css/jquery.fs.picker.css: {}
 	  dependencies:
 	    - core/jquery
-
 
 ### File-closure
 
@@ -590,8 +591,6 @@ An **awesome** new feature from the Twig engine is the debug tool. It allows you
 - How to find the active template
 - Overriding template
 - Debug array. 
-- Escaping user data, using twig | escape (filter)   
-- Using filters in Twig.
 
 ### Find and override a template
 
