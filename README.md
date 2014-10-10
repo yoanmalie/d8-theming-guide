@@ -386,7 +386,7 @@ If everything went well, you should be able to see the screenshot:
 
 ![https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/awesome_theme_screenshot.png](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/awesome_theme_screenshot.png)
 	
-Conclusion: the filename for a screenshot does not have to be `screenshot.png`, as long as it is defined in the *info.yml* file.
+Conclusion: the filename for a screenshot does not have to be `screenshot.png`, as long as it is defined in the *{theme}.info.yml* file.
 
 #### Adding stylesheets
 
