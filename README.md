@@ -539,7 +539,7 @@ This includes our the custom javascript and the dependencies into our theme. In 
 
 	(function ($) {
   	  "use strict"
-  	  Drupal.behaviors.mymodule = {
+  	  Drupal.behaviors.awesome = {
             attach: function (context, settings) {
               $('main').once('awesome').append('<p>Hello world</p>');
             }
