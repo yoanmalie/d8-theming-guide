@@ -4,6 +4,6 @@
 
 - https://github.com/sqndr/d8-theming-guide/pull/1 
 
-[thamas](https://github.com/thamas):
+[@thamas](https://github.com/thamas):
 
 - https://github.com/sqndr/d8-theming-guide/pull/2 
