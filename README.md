@@ -29,9 +29,63 @@ Recently, I added some example code in the repo to get you started. The example 
 
 Drupal 8 is going to be a huge change for the entire community. In order to get front-end developers ready for Drupal 8, I created this theming guide. It contains an overview of how you can build a Drupal 8 theme, using modern front-end tools. If you find any mistakes or outdated documentation, feel free to add a pull request.
 
-## Table of content
-
-[@todo: Add table of content]
+## Table of contents
+- Some major changes
+- Drupal core themes
+	- Bartik
+	- Seven
+	- Stark
+	- Classy
+	- Coding standards
+		- SMACS
+		- BEM
+- Theme engines
+	- What is a theme engine
+	- Twig
+		- Adwantages
+		- Disadvantage
+- Getting started with Twig
+	- Twig autoescape enabled
+	- Printing a variable
+		- Twig filters
+		- Drupal filters
+			- Translation filters
+			- Replace twig's escape filter with our own
+			- Implements safe joining
+			- Array filters
+			- CSS class and ID filters
+		- Translations
+		- Comments
+		- Functions
+		- Create a Twig variable
+- The themes directory
+	- Create your custom theme directory
+- Classy
+- Creating an info file
+	- A simple .info.yml file
+		- Using a base theme
+		- *.info.yml
+		- Adding a screenshot
+		- Adding stylesheets
+		- Overriding stylesheets
+		- Removing stylesheets
+		- Regions
+		- Regions hidden
+- Javascript
+	- Libraries and Scripts
+	- File-closure
+	- "use strict"
+	- ESHint
+- Breakpoints
+- Image styles
+- Theme functions
+- Template files (Twig)
+	- /templates folder
+	- Twig debug
+	- Find and override a template
+	- Twig blocks
+	- page.html.twig
+- Headless Drupal
 
 ## Some major changes
 
@@ -358,13 +412,13 @@ The version of the theme.
 	
 The version of Drupal core the theme requires.
 
-##### Using a base theme
+#### Using a base theme
 
 	base theme: classy
 
 The line above gives you the power to extend from a base theme. This line can be found in both `bartik.info.yml` and  `seven.info.yml`, since these two core themes extend **Classy**.
 
-##### *.info.yml
+#### *.info.yml
 
 To wrap things up, this is our `.info.yml` file so far:
 
@@ -485,7 +539,7 @@ This includes our the custom javascript and the dependencies into our theme. In 
 
 	(function ($) {
   	  "use strict"
-  	  Drupal.behaviors.mymodule = {
+  	  Drupal.behaviors.awesome = {
             attach: function (context, settings) {
               $('main').once('awesome').append('<p>Hello world</p>');
             }
@@ -518,7 +572,7 @@ All of the javascript code **must** be declared inside a closure wrapping the wh
   	  // Custom javascript
 	})();
 
-### "use scrict"
+### "use strict"
 
 The `"use strict"` directive is new in JavaScript 1.8.5 and ignored by previous versions of javascript. The purpose of `"use strict"` is to indicate that the code should be executed in "strict mode". As an example, in *scrict mode*, you cannot use undeclared variables.
 
