@@ -586,7 +586,7 @@ The `"use strict"` directive is new in JavaScript 1.8.5 and ignored by previous 
 
 The *breakpoint* module keeps track of the height, width and resolution breakpoints where a responsive design needs to change in order to respond to different devices being used to view the site. The breakpoint module standardises the use of breakpoints, and enables modules and themes to expose or use each others' breakpoints. The core module does not have a user interface. The breakpoints are stored inside a `{module-or-theme}.breakpoints.yml` file.
 
-- [Breakpoint added to Drupal 8](https://www.drupal.org/node/1813914)
+The change record can be found here: [Breakpoint added to Drupal 8](https://www.drupal.org/node/1813914)
 
 > [Breakpoint UI](http://drupal.org/project/breakpoint_ui), a contrib module, has started working on a user interface for breakpoints.
 
