@@ -588,10 +588,6 @@ The *breakpoint* module keeps track of the height, width and resolution breakpoi
 
 The change record can be found here: [Breakpoint added to Drupal 8](https://www.drupal.org/node/1813914)
 
-> [Breakpoint UI](http://drupal.org/project/breakpoint_ui), a contrib module, has started working on a user interface for breakpoints.
-
-> ![https://www.drupal.org/files/project-images/breakpoints_group.png](https://www.drupal.org/files/project-images/breakpoints_group.png)
-
 Both themes and modules can define breakpoints by creating a configuration file called `{name}.breakpoints.yml` where `{name}` is the name of your theme or module. 
 
 To get a good example, let's take a look at `bartik.breakpoints.yml`:
