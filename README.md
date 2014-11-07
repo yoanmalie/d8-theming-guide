@@ -6,6 +6,8 @@ Hi, my name is Sander. I'm a web developer from Belgium.
 
 If you ever want to get in touch, feel free to contact me.
 
+> Currently I'm at [DrupalCamp Ghent](http://drupalcamp.be).
+
 - [Drupal.org](https://www.drupal.org/u/sqndr)
 - [Twitter](http://twitter.com/sqndr)
 
