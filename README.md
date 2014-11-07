@@ -511,9 +511,9 @@ The `regions_hidden` can be applied to any previous defined *regions*. Regions w
 
 ### Libraries and Scripts
 
-Drupal 8 doesn't load any additional scripts. This also means that by default a library like [jQuery is not included](https://www.drupal.org/node/1541860). You have to declare it as a dependency for your script in order to use it. In the early stages of Drupal 8, this was done using `hook_library_info`. Since this was one of the last remaining hooks in Drupal 8, it got [replaced by a `*.libraries.yml` file](https://www.drupal.org/node/2201089).
+Drupal 8 doesn't load any additional scripts. This also means that by default a library like [jQuery is not included](https://www.drupal.org/node/1541860). This is mostyl due to performance reasons. You have to declare jQuery (or any other core library) as a dependency for your script in order to use it. In the early stages of Drupal 8, this was done using `hook_library_info`. Since this was one of the last remaining hooks in Drupal 8, it got [replaced by a `*.libraries.yml` file](https://www.drupal.org/node/2201089).
 
-> Since Drupal 8 does not support IE8 and below, and because Javacript has evolved, [you might not need jQuery](http://youmightnotneedjquery.com/). If hovever you do want to use jQuery, make sure to look up some of the [best practices](http://lab.abhinayrathore.com/jquery-standards/) for using jQuery.
+> Since Drupal 8 does not support IE8 - and below - and because Javacript has evolved, [you might not need jQuery](http://youmightnotneedjquery.com/). If hovever you do want to use jQuery, make sure to look up some of the [best practices](http://lab.abhinayrathore.com/jquery-standards/) for using jQuery.
 
 Let's add some custom javascript to our theme. Our script will location in the `js` folder inside our theme (`/js/awesome.js`). Next, we create a `*.libraries.yml` file. Let's call this `awesome.libraries.yml` (`{theme-or-module-name}`.libraries.yml) and save it into the root of our theme. 
 	
@@ -635,9 +635,9 @@ Breakpoint multipliers. Multipliers are a measure of the viewport's device resol
 
 ## Theme functions
 
-This section is dedicated to all people who have been dealing with `theme`-functions in Drupal 7. All of the `theme`-function are gone and have been replaced with template files. The next section goes into detail about how you can modify and override them. It also handles how you can complety control all the classes add to the layout.
+This section is dedicated to all people who have been dealing with `theme`-functions in Drupal 7. All of the `theme_`-function are gone and have been replaced with template files. The next section goes into detail about how you can modify and override these templates. It also handles how you can complety control all the classes add to the layout.
 
-> As you're reading this, it might be possible that some of the theme_ functions still exists. The goal would be to have all of them removed completly by a first release canditate. 
+> As you're reading this, it might be possible that some of the `theme_` functions still exists. The goal would be to have all of them removed completly by a first release canditate (Drupal 8 RC1).
 
 ![Awesome](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/minions.gif)
 
@@ -647,7 +647,7 @@ Twig is a PHP-based compiled templating language. When your web page renders, th
 
 ### /templates folder
 
-The `theme`-functions are gone. Almost all the core themes (and modules) now contain a new folder called `templates`. In this folder, the Twig template files are stored.
+The `theme_`-functions are gone. Almost all the core themes (and modules) now contain a new folder called `templates`. In this folder, the Twig template files are stored.
 
 [@todo:] Document the new folder, that contains all the templates files instead of all the `theme_`-functions. 
 
@@ -663,6 +663,7 @@ An **awesome** new feature from the Twig engine is the debug tool. It allows you
 - How to find the active template
 - Overriding template
 - Debug array. 
+- Add screenshot
 
 ### Find and override a template
 
@@ -671,11 +672,6 @@ An **awesome** new feature from the Twig engine is the debug tool. It allows you
 - Part of a template, you can modify on; extending twig template files.
 
 [@todo]
-
-### page.html.twig
-
-[@todo:] Document this template file.
-
 
 ## Headless Drupal
 
