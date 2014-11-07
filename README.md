@@ -171,7 +171,7 @@ At DrupalCon Amsterdam, the **classy.info.yml** got commited into Drupal 8 core 
 
 ### Coding standards
 
-It's important to know and follow the Drupal coding standards, especially when you want to get involved into Drupal core (theme) development. Yet, it's might be useful as well to follow these standards in your own projects.
+It's important to know and follow the Drupal coding standards, especially when you want to get involved into Drupal core (theme) development. It's also useful to follow these standards in your own projects.
 
 There are coding standards for css, javascript and the new Twig template engine:
 
@@ -185,9 +185,20 @@ Drupal 8 uses the **SMACSS** system to conceptually categorize CSS rules.
 
 1. Base
 2. Layout
-3. Component (The official **SMACSS** theminoly for this is *modules*. Since *modules* have a different meaning in Drupal, this component was rename to component, to avoid confusion.)
+3. Component (The official **SMACSS** theminoly for this is *modules*. Since *modules* have a different meaning in Drupal, this component was renamed to *component*, to avoid confusion.)
 4. State
 5. Theme
+
+More information about SMACSS can be found at [SMACSS](https://smacss.com/).
+
+##### SMACSS for Seven
+
+The Seven theme uses these categories to split up the css rules. The Seven theme contains a directory called css. Inside this folder, four more directories live:
+
+- `core/themes/seven/base`
+- `core/themes/seven/components`
+- `core/themes/seven/layout`
+- `core/themes/seven/theme`
 
 #### BEM
 
@@ -237,7 +248,6 @@ Twig is a modern template engine for PHP. All of the `theme_*` functions and PHP
 #### Disadvantage
 
 - Although the syntax is very easy to read and understand, it's a new syntax you have to learn before getting started.
-
 
 ## Getting started with Twig
 
@@ -542,9 +552,9 @@ This includes our the custom javascript and the dependencies into our theme. In 
 	(function ($) {
   	  "use strict"
   	  Drupal.behaviors.awesome = {
-            attach: function (context, settings) {
-              $('main').once('awesome').append('<p>Hello world</p>');
-            }
+        attach: function (context, settings) {
+          $('main').once('awesome').append('<p>Hello world</p>');
+        }
   	  };
 	}(jQuery));
 	
