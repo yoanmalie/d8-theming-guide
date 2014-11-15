@@ -1,12 +1,12 @@
 ## Some major changes
 
-Let's kick of with some major changes that you, as a Drupal themer, must be aware of. This is especially useful if you've been involved in Drupal 7 theming in the past.
+Here's a list containing some major changes that you, as a Drupal themer, must be aware of. This is especially useful if you've been involved in Drupal 7 theming in the past.
 
 - The markup in Drupal 8 is now [HTML5](http://buytaert.net/html5-in-drupal-8). New tags like `header`, `nav`, `article` are used in core.
 
 - [WAI-ARIA Roles](https://www.drupal.org/node/1179668) are added. They are a set of roles, states, and properties, which can be applied to markup to provide rich semantics, increasing accessibility and interoperability. Although WAI-ARIA properties were not valid in xhtml 1.0, they are valid in HTML5, and can therefore be applied in the markup of Drupal 8. By using the role attribute with an HTML element, authors can provide more information about the purpose of components on the page.
 
-- `<DIV ID="BAD-PRACTICE">...</DIV>`. Drupal 8 now has 75% less ID's than the Drupal 7 CSS! In other words: **kill all the #ids**!
+- `<div id="bad-practice">...</div>`. Drupal 8 now has 75% less ID's than the Drupal 7 CSS! In other words: **kill all the #ids**!
 
 - [The CSS (File) Structure](https://www.drupal.org/node/1887918) is based on SMACSS & BEM.
 
@@ -23,9 +23,10 @@ Drupal 8 uses SVG in place of PNG to provide resolution independent icons in the
 
 - Due to the fact that these older browsers are no longer supported, the css in Drupal core is able to move a big step forward. Instead of adding classes like odd, even, first and last; we are now able to use pseudo selectors. [Most first/last/odd/even classes removed in favor of CSS3 pseudo selectors](https://www.drupal.org/node/2178215)
 
-- [An new, empty core theme](https://www.drupal.org/node/2289511)
-Read more on *classy*, a new core theme later on in the documentation.
+- [An new, empty core theme](https://www.drupal.org/node/2289511). You'll learn more from *classy* later in the documentation.
 
 - [CSS classes being moved from preprocess to Twig templates](https://www.drupal.org/node/2325067).
 
-![MortenDK approved](http://mortendk.github.io/drupal8-twig-frankfurt-2014/images/cssfilename-approved.jpg)
+- …
+
+> A lot more has changed. You can find all the important change records for themers [here](https://www.drupal.org/list-changes/published/drupal?keywords_description=&to_branch=&version=&created_op=%3E%3D&created%5Bvalue%5D=&created%5Bmin%5D=&created%5Bmax%5D=&impacts%5B%5D=3).

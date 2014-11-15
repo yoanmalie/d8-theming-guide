@@ -4,7 +4,7 @@
 
 > Escape a string means to reduce ambiguity characters in a string.
 
-[Twig autoescape enabled](https://www.drupal.org/node/2296163) by default. This means that every string printed from a Twig template (anything between `{{ }}`) gets escaped.
+[Twig autoescape enabled](https://www.drupal.org/node/2296163) by default. This means that every string printed from a Twig template (anything between `{{ }}`) gets *escaped*.
 
 ### Printing a variable
 
@@ -69,19 +69,19 @@ It's possible to embed a variable in a translatable string, using the `{{ variab
 
 To apply a filter to a variable, used in a translatable block you first need to assign the result to a variable.
 
-  {% set name = name|capitalize %}
+    {% set name = name|capitalize %}
 
-  {% trans %}
-        Hello {{ name }}!
-  {% endtrans %}
+    {% trans %}
+      Hello {{ name }}!
+      {% endtrans %}
 
 A translatable string can be pluralized. Implementing a `{% plural ... %}` switch makes this possible.
 
-  {% trans %}
-    Hello star.
-  {% plural count %}
-    Hello {{ count }} stars.
-  {% endtrans %}
+    {% trans %}
+      Hello star.
+    {% plural count %}
+      Hello {{ count }} stars.
+    {% endtrans %}
 
 [@todo:] {% trans %} debugging
 
@@ -93,23 +93,23 @@ A translatable string can be pluralized. Implementing a `{% plural ... %}` switc
 
 An `if` function.
 
-  {% if site_slogan %}
-    <div class="site-slogan">{{ site_slogan }}</div>
-  {% endif %}
+    {% if site_slogan %}
+      <div class="site-slogan">{{ site_slogan }}</div>
+    {% endif %}
 
 A `for` function. The output for this is `0, 1, 2, 3`.
 
 > The `range` function returns a list containing an arithmetic progression of integers.
 
-  {% for i in range(0, 3) %}
-    {{ i }},
-  {% endfor %}
+    {% for i in range(0, 3) %}
+      {{ i }},
+    {% endfor %}
 
 Another example, from the `field--node--title.html.twig` template:
 
-  {%- for item in items -%}
-    {{ item.content }}
-  {%- endfor -%}
+    {%- for item in items -%}
+      {{ item.content }}
+    {%- endfor -%}
 
 #### Create a Twig variable
 

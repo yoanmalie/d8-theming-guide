@@ -2,7 +2,7 @@
 
 It's important to know and follow the Drupal coding standards, especially when you want to get involved into Drupal core (theme) development. It's also useful to follow these standards in your own projects.
 
-There are coding standards for css, javascript and the new Twig template engine:
+There are coding standards for **css**, **javascript** and the new **Twig** template engine:
 
 - [CSS Coding standards](https://www.drupal.org/node/1886770).
 - [Javascript Coding standards](https://www.drupal.org/node/172169).
@@ -14,20 +14,24 @@ Drupal 8 uses the **SMACSS** system to conceptually categorize CSS rules.
 
 1. Base
 2. Layout
-3. Component (The official **SMACSS** theminoly for this is *modules*. Since *modules* have a different meaning in Drupal, this component was renamed to *component*, to avoid confusion.)
+3. Component (The official **SMACSS** theminoly for this is *modules*. Since *modules* have a different meaning in Drupal, this category was renamed to *component* to avoid confusion.)
 4. State
-5. Theme
+5. Theme (Sometimes also called **skin**)
 
-More information about SMACSS can be found at [SMACSS](https://smacss.com/).
+More information about SMACSS can be found on the [SMACSS](https://smacss.com/) website.
+
+![MortenDK approved](../img/mortendk.jpg)
 
 #### SMACSS for Seven
 
-The Seven theme uses these categories to split up the css rules. The Seven theme contains a directory called css. Inside this folder, four more directories live:
+The Seven theme uses these categories to split up the css rules. The Seven theme contains a directory called `css`. Inside this folder, four more directories live:
 
 - `core/themes/seven/base`
 - `core/themes/seven/components`
 - `core/themes/seven/layout`
 - `core/themes/seven/theme`
+
+These folder contain the stylesheet (`.css` files) for each corresponding category.
 
 [Read more](https://www.drupal.org/node/2321505) about splitting up `style.css` into SMACSS categories.
 
@@ -43,10 +47,11 @@ BEM (Block Element Modifier) is a naming convention.
 
 Source: [Smashing Magazine](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
 
-`buttons.theme.css` (Seven):
+`buttons.theme.css (Seven)`:
 
-`.button {}`, a **block**.
-`.button--primary {}`, a **modifier**.
+- `.button {}`, a **block**.
+- `.button--primary {}`, a **modifier**.
 
-`node.css` (Seven):
-`.node__submitted {}`, an **element**.
+`node.css (Seven)`:
+
+- `.node__submitted {}`, an **element**.

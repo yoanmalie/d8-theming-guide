@@ -1,5 +1,10 @@
-# Getting started
+# Hello world, I'm Sander
 
-Drupal 8 is going to be a huge change for the entire community. I created this theming guide to get front-end developers ready for Drupal 8. It contains an overview of how you can build a Drupal 8 theme, using modern front-end tools. If you find a mistakes or outdated documentation, feel free to add a pull request.
+Hi, my name is Sander. I'm a web developer from Belgium. At the start of 2014, I got really excieted about Drupal. At a local sprint, I had the chance to start contributing to Drupal. I came for the code and stayted for the huge community. I started traveling around Europe to attend various Drupal events. During those travels, I met so many new interesing and talented people. Since I was fairly new, I knew what the hard part was for me when getting started with Drupal. Documentation. Somewhere after the summer of 2014, I decided to start working on a theming guide. What you're reading right now is the result of hours of work and free time.
 
-Are you ready? Let's get started with an overview of changes that happend in Drupal 8. Oh, and make sure you are familiar with Drupal coding standards when getting started on a Drupal project!
+If you ever want to get in touch, feel free to contact me.
+
+![A picture of myself](../img/me.png)
+
+- [sqndr | d.o](https://www.drupal.org/u/sqndr)
+- [@sqndr | twitter](http://twitter.com/sqndr)

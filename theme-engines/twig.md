@@ -4,10 +4,6 @@ Twig is a modern template engine for PHP. It's part of the Symfony 2 framework. 
 
 All of the `theme_*` functions and PHPTemplate based `*.tpl.php` files have been completely replaced with Twig `.html.twig` template files. The template files now have a new (Twig) extension, `*.html.twig`.
 
-### Documentation
-
-[The official Twig documentation from Sensio Labs](http://twig.sensiolabs.org/documentation).
-
 ### Coding standards
 
 - Generic Twig coding standards: http://twig.sensiolabs.org/doc/coding_standards.html
@@ -33,3 +29,9 @@ All of the `theme_*` functions and PHPTemplate based `*.tpl.php` files have been
 ### Disadvantage
 
 - Although the syntax is very easy to read and understand, it's a new syntax you have to learn before getting started.
+
+***
+
+**Read more**
+
+* [The official Twig documentation from Sensio Labs](http://twig.sensiolabs.org/documentation).

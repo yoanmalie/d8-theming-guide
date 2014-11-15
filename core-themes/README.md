@@ -1,6 +1,6 @@
 # Drupal core themes
 
-Drupal **core** themes live inside `core/themes`. Inside this folder we can find the four Drupal 8 core themes:
+Drupal **core** themes live inside `core/themes`. Inside this folder the four Drupal 8 core themes live. As part of the Drupal 8 Mobile Initiative all of Drupal core's themes have been converted to have responsive designs.
 
 - **bartik**: *A flexible, recolorable theme with many regions and a responsive, mobile-first layout.*
 - **seven**: *The default administration theme for Drupal 8 was designed with clean lines, simple blocks, and sans-serif font to emphasize the tools and tasks at hand.*
