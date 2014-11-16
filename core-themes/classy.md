@@ -19,13 +19,13 @@ Here's a brief overview of [the meta issue](https://www.drupal.org/node/2289511)
 
 #### Technical changes
 
-Technically it comes down to this: The classes from core have been moved into the classy base theme. This was done in two phases. During the first phase the classes have been moved out of preprocess functions and moved into core templates. In the second phase the core template with classes have been moved to Classy and all of the classes have been removed from core template files.
+Technically it comes down to this: The classes from core have been moved into the classy base theme. This was done in two phases. During the first phase the classes have been moved out of preprocess functions and moved into core templates. In the second phase the core templates with classes have been moved into Classy and all of the classes have been removed from core templates. Due to this, all of the template files in core are now 'classless' (=no more `class="whatever"` in core).
 
-Themers no longer require a base theme like [mothership](https://www.drupal.org/project/mothership) to *keelhaul the div*! A survey showed that no all themers want the same markup. Thanks to Classy, no one has to waist any more time undoing core.
+Themers no longer require a base theme like [mothership](https://www.drupal.org/project/mothership) to *keelhaul the div*! A survey showed that not all themers want the same markup. Thanks to Classy, no one has to waist any more time undoing core. The first group of themers that want sensible default classes can use classy as a base theme for there custom themes (more information on that later). The second group that wants full control of all the markup and the classes can start from scratch, without having to override anything, unlike the Drupal 7 experience.
 
 ### Classy, a new base theme
 
-Classy is a new `base theme` that *Bartik* and *Seven* will both use.
+Classy, the a new `base theme` will be the theme *Bartik* and *Seven* will both extend from. 
 
 [Add classy.info.yml to core, set Classy as base theme for Bartik and Seven](https://www.drupal.org/node/2329501)
 
