@@ -49,7 +49,7 @@ Javascript theme functions are now using `Drupal.theme` directly.
 
 Declaring several theme functions can be done using the
 [`$.extend()`](http://api.jquery.com/jquery.extend/) pattern. This is a
-considered a better approach.
+considered a better approach for declaring serveral functions.
 
 ***
 
