@@ -69,7 +69,7 @@ Let's add some custom javascript to our theme. Our script will location in the
 `awesome.js` and add a little behavior.
 
     (function ($) {
-      "use strict";
+      'use strict';
       Drupal.behaviors.awesome = {
         attach: function (context, settings) {
           $('main').once('awesome').append('<p>Hello world</p>');
