@@ -95,11 +95,11 @@ All of the javascript code **must** be declared inside a closure wrapping the
 whole file. This closure **must** be in strict mode.
 
     (function () {
-        "use strict";
+        'use strict';
         // Custom javascript
     })();
 
-### "use strict"
+### 'use strict'
 
 The `"use strict"` directive is new in JavaScript 1.8.5 and ignored by previous
 versions of javascript. The purpose of `"use strict"` is to indicate that the
