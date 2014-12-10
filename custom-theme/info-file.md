@@ -64,6 +64,8 @@ Conclusion: the filename for a screenshot does not have to be `screenshot.png`, 
 
 #### Adding stylesheets
 
+@todo Change to asset libraries.
+
 It's of course important to know how to add stylesheets to your theme. Let's add a css file called `styles.css` (that lives inside the `css` directory: `/css/styles.css`) to our theme.
 
 	# Adding styles.css to our theme.
