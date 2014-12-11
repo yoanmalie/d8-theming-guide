@@ -5,3 +5,9 @@
 > Some people might be wondering if this theme should be renamed to `eight` ([Rename Seven in D8](https://www.drupal.org/node/1297428))? The answer is **no**.
 
 ![Seven screenshot](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/seven.png)
+
+***
+
+**Read more**
+
+
