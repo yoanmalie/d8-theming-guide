@@ -1,3 +1,4 @@
 # Twig
 
-An introduction to the Twig chapter.
+In the previous chapter you got introduced to Twig, the new template engine for Drupal 8. In this chapter you'll learn the basic of working with this template engine.
+
