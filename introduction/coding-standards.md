@@ -55,3 +55,10 @@ Source: [Smashing Magazine](http://www.smashingmagazine.com/2014/07/17/bem-metho
 `node.css (Seven)`:
 
 - `.node__submitted {}`, an **element**.
+
+***
+
+**Read more**
+
+* [Organize Your Styles - An Introduction to SMACSS](https://www.acquia.com/blog/organize-your-styles-introduction-smacss), a blog post by Acquia.
+* 
