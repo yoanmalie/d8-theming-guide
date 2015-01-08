@@ -16,7 +16,7 @@ During the early development of Drupal 8, assets such as javascript and styleshe
 
     ...
 
-An alternative path was chosen. Javascript maintainer **_nod** created an issue on [using AMD for JS architecture](https://www.drupal.org/node/1542344). The patch for the issue however became so big, a separate issue was created that handled the splitting up of the dependencies. The patch from this issue - [Explicitly declare all JS dependencies, don't use drupal_add_js](https://www.drupal.org/node/1737148) - where all javascript files are declared as libraries and added the relevant dependencies to the scripts, got committed about two weeks after the creation. The original issue [**AMD architecture**] however was posponed to a later Drupal releases (Drupal 9.x).
+An alternative path was chosen. Javascript maintainer **_nod** created an issue on [using AMD for JS architecture](https://www.drupal.org/node/1542344). The patch for the issue however became so big, a separate issue was created that handled the splitting up of the dependencies. The patch from this issue - [Explicitly declare all JS dependencies, don't use drupal_add_js](https://www.drupal.org/node/1737148) - where all javascript files are declared as libraries and added the relevant dependencies to the scripts, got committed about two weeks after the creation. The original issue [**AMD architecture**] however was posponed to a later Drupal release (Drupal 9.x).
 
 ## {}.libraries.yml
 
@@ -42,11 +42,11 @@ Inside the `.info.yml` file the library can be included into our theme, using th
     libraries:
       - example/base
 
-This means the *example* theme has a dependency on the `base` library (from the *example* theme/module); `example/base`. The `base` library itself contains a single javascript file (`scripts.js`) that has it's own dependencies.
+This means the *example* theme has a dependency on the `base` library (from the *example* theme/module); `example/base`. The `base` library itself contains a single javascript file (`scripts.js`), a css file (categoried as a component) and has dependencies on the `drupal` and `jquery` library from core.
 
 ## The history of libraries, part 2
 
-Coming from this change, the `scripts` tag from the `.info.yml`, had to be removed and replaced with the `libraries` property. This ment that scripts were include using the `libraries` property and a `libraries.yml` file. Stylesheets however (in themes) were still included using the `stylesheets` property:
+Coming from this change, the `scripts` tag from the `.info.yml`, had to be removed and replaced with the `libraries` property. This ment scripts were include using the `libraries` property and a `libraries.yml` file. Stylesheets however (in themes) were still included using the `stylesheets` property:
 
 **_nod**:
 
@@ -54,7 +54,7 @@ Coming from this change, the `scripts` tag from the `.info.yml`, had to be remov
 
 > stylesheets[] can be kept as is, it's totally fair to add a single css file without dependencies. It's highly unlikely for scripts, they will need to depend on jquery, drupal.js 99% of the time.
 
-It became clear this new way of adding assets had some major advantages. Wim Leers created a new issue stating [Themes should use libraries, not individual stylesheets](https://www.drupal.org/node/2377397). This is where the `stylesheets` property from the `.info` file got removed.
+It became clear this new way of adding assets had some major advantages. Wim Leers created a new issue stating [Themes should use libraries, not individual stylesheets](https://www.drupal.org/node/2377397). This is where the `stylesheets` property from the `.info` file got removed to have a unified way for adding assets libraries.
 
 ## The advantages of libraries and dependencies
 
