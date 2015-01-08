@@ -130,9 +130,9 @@ A `for` function. The output for this is `0, 1, 2, 3`.
 
 Another example, from the `field--node--title.html.twig` template:
 
-    {%- for item in items -%}
+    {% for item in items %}
       {{ item.content }}
-    {%- endfor -%}
+    {% endfor %}
  
 Inside of a for loop block you can access some special variables. 
 
@@ -146,6 +146,16 @@ Inside of a for loop block you can access some special variables.
 | items.last      | True if last iteration                                        |
 | items.length    | The number of items in the sequence                           |
 | items.parent    | The parent context                                            |
+
+A replacement block can be rendered if no iteration took place (because the sequence was empty). This can be done by using `else`.
+
+    <ul>
+    {% for user in users %}
+      <li>{{ user.username|e }}</li>
+    {% else %}
+      <li><em>no user found</em></li>
+    {% endfor %}
+    </ul>
 
 #### Create a Twig variable
 
