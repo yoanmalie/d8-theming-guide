@@ -27,6 +27,8 @@ It's very easy to access a variable that get's passed from php, but what about a
 
 To access a value from the arary, we simple use the name of the variable, followed by a `.` and the name of the key.
 
+  *Twig*
+
     {{ awesome_array.a_key }} # returns 'a_value'
     {{ awesome_array.another_key.foo }} # returns 'bar'
   
