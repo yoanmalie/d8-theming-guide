@@ -118,6 +118,8 @@ An `if` function.
       <div class="site-slogan">{{ site_slogan }}</div>
     {% endif %}
 
+#### Loops
+
 A `for` function. The output for this is `0, 1, 2, 3`.
 
 > The `range` function returns a list containing an arithmetic progression of integers.
@@ -131,6 +133,20 @@ Another example, from the `field--node--title.html.twig` template:
     {%- for item in items -%}
       {{ item.content }}
     {%- endfor -%}
+ 
+ Other actions with loops
+ 
+ [@Todo: Add more information]
+ 
+    {{ loop.length }}    
+    {{ loop.first }}
+    {{ loop.last }}
+    {{ loop.index }}
+    
+    {% if loop.first %}
+    {% elseif loop.index == 2 %}
+    {% elseif loop.last %}
+    {% endif %}
 
 #### Create a Twig variable
 
