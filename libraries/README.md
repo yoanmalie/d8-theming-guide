@@ -74,7 +74,9 @@ Copied from the issue summary of [2377397](https://www.drupal.org/node/2377397):
 
 Drupal 8 doesn't load any additional scripts by default. This also means that a library like [jQuery is not included](https://www.drupal.org/node/1541860) on every page any more. This is mostly due to performance reasons. You have to declare jQuery (or any other core library) as a dependency in order to use it.
 
-A quick overview of the of the core libraries.
+A quick overview of the of some of the core libraries.
+
+> To get a **complete overview** of all the core libraries, take a look inside `core/core.libraries.yml`.
 
 - `core/drupal`
 
@@ -87,5 +89,3 @@ To include the Drupal core version of jQuery, we add `core/jquery`.
 - `core/jquery.once`
 
 A jQuery plugin allowing to only apply a function once to an element.
-
-- …
