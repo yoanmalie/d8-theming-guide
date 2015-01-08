@@ -12,6 +12,25 @@ To print a simple variable in a template, use `{{ variable }}`.
 
 It's possible to let the varible go through a filter before printing it. This can be done using `{{ varible|filter }}`.
 
+### Accessing arrays
+
+It's very easy to access a variable that get's passed from php, but what about arrays? They are a very common used data type.
+
+  *PHP*
+
+    $awesome_array = array(
+      'a_key' => 'a_value',
+      'another_key' => array(
+        'foo' => 'bar',
+      ),
+    );
+
+To access a value from the arary, we simple use the name of the variable, followed by a `.` and the name of the key.
+
+    {{ awesome_array.a_key }} # returns 'a_value'
+    {{ awesome_array.another_key.foo }} # returns 'bar'
+  
+
 #### Twig filters
 
 Here are some example of filters from the Twig engine.
@@ -113,4 +132,26 @@ Another example, from the `field--node--title.html.twig` template:
 
 #### Create a Twig variable
 
-Sometimes it might be useful to define variables in a template file. `{% set foo=“bar” %}` declaires a variable `foo` and assigns the value `bar` to it. Later in the template, the variable can be printed out using `{{ foo }}`.
+Sometimes it might be useful to define variables in a template file. `{% set foo="bar" %}` declaires a variable `foo` and assigns the value `bar` to it. Later in the template, the variable can be printed out using `{{ foo }}`.
+
+    example.twig.php
+    ---
+    
+    {% set foo="bar" %}
+    
+    # Other code here
+    
+    Hi, here's my variable: {{ foo }}
+
+The variable can be a single value, as mentioned in the example above, but it can also be an array:
+
+    another_example.twig.php
+    ---
+
+    {%
+      set foo_array = [
+        'foo',
+        'bar',
+      ]
+    %}
+
