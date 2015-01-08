@@ -134,19 +134,18 @@ Another example, from the `field--node--title.html.twig` template:
       {{ item.content }}
     {%- endfor -%}
  
- Other actions with loops
- 
- [@Todo: Add more information]
- 
-    {{ loop.length }}    
-    {{ loop.first }}
-    {{ loop.last }}
-    {{ loop.index }}
-    
-    {% if loop.first %}
-    {% elseif loop.index == 2 %}
-    {% elseif loop.last %}
-    {% endif %}
+Inside of a for loop block you can access some special variables. 
+
+| Variable       | Description                                                    |
+|----------------|----------------------------------------------------------------|
+| items.index     | The current iteration of the loop. (1 indexed)                |
+| items.index0    | The current iteration of the loop. (0 indexed)                |
+| items.revindex  | The number of iterations from the end of the loop (1 indexed) |
+| items.revindex0 | The number of iterations from the end of the loop (0 indexed) |
+| items.first     | True if first iteration                                       |
+| items.last      | True if last iteration                                        |
+| items.length    | The number of items in the sequence                           |
+| items.parent    | The parent context                                            |
 
 #### Create a Twig variable
 
