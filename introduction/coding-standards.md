@@ -61,4 +61,4 @@ Source: [Smashing Magazine](http://www.smashingmagazine.com/2014/07/17/bem-metho
 **Read more**
 
 * [Organize Your Styles - An Introduction to SMACSS](https://www.acquia.com/blog/organize-your-styles-introduction-smacss), a blog post by Acquia.
-* [BEM and SMACSS: Advice From Developers Who’ve Been There](http://www.sitepoint.com/bem-smacss-advice-from-developers/)
+* [BEM and SMACSS: Advice From Developers Who’ve Been There](http://www.sitepoint.com/bem-smacss-advice-from-developers/), a blog post by New Relic.
