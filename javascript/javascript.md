@@ -1,8 +1,18 @@
 ## Javascript
 
-When it comes down to Javascript, a few things have changed. Most of the work
-has been done by the javascript maintainer for Drupal 8;
-[_nod](https://www.drupal.org/u/nod_).
+[Introduction]
+
+### jQuery
+
+Drupal 8 doesn't load any additional scripts by default. This also means that a library like [jQuery is not included](https://www.drupal.org/node/1541860) on every page any more. This is mostly due to performance reasons:
+
+You have to declare jQuery (or any other core library) as a dependency for your script in order to use it. In the early stages of Drupal 8, this was done using `hook_library_info`. Since this was one of the last remaining hooks in Drupal 8, it got [replaced by a `*.libraries.yml` file](https://www.drupal.org/node/2201089).
+
+> Since Drupal 8 does not support IE8 - and below - and because Javacript has evolved, [you might not need jQuery](http://youmightnotneedjquery.com/). If however you do want to use jQuery, make sure to look up the [best practices](http://lab.abhinayrathore.com/jquery-standards/) for using jQuery.
+
+#### jQuery and Drupal
+
+Drupal uses jQuery in a no-conflict mode. In jQuery, `$` is an alias for `jQuery`. Other javascript libraries often use `$` as a function or variable name. When using jQuery in a no-conflict mode, this `$` variable is released so other libraries can use this `$` variable.
 
 ### Theme function (`Drupal.theme`)
 
@@ -128,3 +138,9 @@ error.
 > As of Drupal 8, we use ESLint to make sure our JavaScript code is consistent and free from syntax error and leaking variables and that it can be properly minified.
 
 [More on ESLint](https://www.drupal.org/node/1955232)
+
+***
+
+**Read more**
+
+[jQuery.noConflict()](http://api.jquery.com/jquery.noconflict/), from the jQuery API.
