@@ -99,10 +99,23 @@ the text *Hello world*, and appends it to the `main`-tag. Using the
 `processed`- class to the `main` tag
 (`<main role="main" class="awesome-processed">`) in order to accomplish this.
 
-Alongside `attach` lives `detach`, which can be used to detach registered behaviors from a page element. Besides from a `context` and `settings`, it also expects a `trigger`. The `trigger` is a string containing the causing of the behavior to be detached. Possible causings:
+Alongside `attach` lives `detach`, which can be used to detach registered behaviors from a page element. Besides from a `context` and `settings`, it also expects a `trigger`. The `trigger` is a string containing the causing of the behavior to be detached. Possible causings (from `drupal.js`):
 
-- "unload", meaning the context element is *removed* from the DOM.
-- "move", meaing the context element is *moved* inside the DOM. Afterwards, the attach function is called again. 
+- *unload*: (default) The context element is being removed from the DOM.
+- *move*: The element is about to be moved within the DOM (for example,
+during a tabledrag row swap). After the move is completed,
+Drupal.attachBehaviors() is called, so that the behavior can undo
+whatever it did in response to the move. Many behaviors won't need to
+do anything simply in response to the element being moved, but because
+IFRAME elements reload their "src" when being moved within the DOM,
+behaviors bound to IFRAME elements (like WYSIWYG editors) may need to
+take some action.
+- *serialize*: When an Ajax form is submitted, this is called with the
+form as the context. This provides every behavior within the form an
+opportunity to ensure that the field elements have correct content
+in them before the form is serialized. The canonical use-case is so
+that WYSIWYG editors can update the hidden textarea to which they are
+bound.
 
     (function ($) {
       'use strict';
