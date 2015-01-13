@@ -116,17 +116,17 @@ opportunity to ensure that the field elements have correct content
 in them before the form is serialized. The canonical use-case is so
 that WYSIWYG editors can update the hidden textarea to which they are
 bound.
-
-    (function ($) {
-      'use strict';
-      Drupal.behaviors.awesome = {
-        attach: function(context, settings) {
-        
-        },
-        detach: function (context, settings, trigger) {
-        }
-      };
-    }(jQuery));
+    
+        (function ($) {
+          'use strict';
+          Drupal.behaviors.awesome = {
+            attach: function(context, settings) {
+            
+            },
+            detach: function (context, settings, trigger) {
+            }
+          };
+        }(jQuery));
 
 ### File-closure
 
