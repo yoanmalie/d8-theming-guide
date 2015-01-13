@@ -81,7 +81,7 @@ Let's add some custom javascript to our theme. Our script will location in the
     (function ($) {
       'use strict';
       Drupal.behaviors.awesome = {
-        attach: function (context, settings) {
+        attach: function(context, settings) {
           $('main').once('awesome').append('<p>Hello world</p>');
         }
       };
@@ -98,6 +98,22 @@ the text *Hello world*, and appends it to the `main`-tag. Using the
 `.once('awesome')` will make sure the code only runs once. It adds a
 `processed`- class to the `main` tag
 (`<main role="main" class="awesome-processed">`) in order to accomplish this.
+
+Alongside `attach` lives `detach`, which can be used to detach registered behaviors from a page element. Besides from a `context` and `settings`, it also expects a `trigger`. The `trigger` is a string containing the causing of the behavior to be detached. Possible causings:
+
+- "unload", meaning the context element is *removed* from the DOM.
+- "move", meaing the context element is *moved* inside the DOM. Afterwards, the attach function is called again. 
+
+    (function ($) {
+      'use strict';
+      Drupal.behaviors.awesome = {
+        attach: function(context, settings) {
+        
+        },
+        detach: function (context, settings, trigger) {
+        }
+      };
+    }(jQuery));
 
 ### File-closure
 
