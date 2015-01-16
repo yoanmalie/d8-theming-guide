@@ -10,24 +10,24 @@ Both themes and modules can define breakpoints by creating a configuration file 
 
 To get a good example, let's take a look at `bartik.breakpoints.yml`:
 
-  bartik.mobile:
-    label: mobile
-    mediaQuery: '(min-width: 0px)'
-    weight: 0
-    multipliers:
-      - 1x
-  bartik.narrow:
-    label: narrow
-    mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
-    weight: 1
-    multipliers:
-      - 1x
-  bartik.wide:
-    label: wide
-    mediaQuery: 'all and (min-width: 851px)'
-    weight: 2
-    multipliers:
-      - 1x
+    bartik.mobile:
+      label: mobile
+      mediaQuery: '(min-width: 0px)'
+      weight: 0
+      multipliers:
+        - 1x
+    bartik.narrow:
+      label: narrow
+      mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
+      weight: 1
+      multipliers:
+        - 1x
+    bartik.wide:
+      label: wide
+      mediaQuery: 'all and (min-width: 851px)'
+      weight: 2
+      multipliers:
+        - 1x
 
 Each breakpoint has it's own identifier. Bartik has 3 unique breakpoints: *mobile*, *narrow* and *wide*. Each breakpoint is defined as `{module or theme name}.{label}`, with `bartik.mobile` as an example. The name of the module or theme is used to make sure the identifier is unique. This way, modules can include breakpoint from each other.
 
