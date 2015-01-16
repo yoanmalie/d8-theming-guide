@@ -4,7 +4,9 @@ This document is (currently) licenced with a [Attribution-NonCommercial-NoDeriva
 
 *You are free to:*
 
-**Share** — copy and redistribute the material in any medium or format. The licensor cannot revoke these freedoms as long as you follow the license terms.
+- **Share** — copy and redistribute the material in any medium or format.
+
+The licensor cannot revoke these freedoms as long as you follow the license terms.
 
 *Under the following terms:*
 
