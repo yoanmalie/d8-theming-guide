@@ -1,6 +1,6 @@
 ## Libraries
 
-## Adding a library
+## Adding a javascript library
 
 Next, we create a `*.libraries.yml` file. Let's call this `awesome.libraries.yml` (`{theme-or-module-name}`.libraries.yml) and save it into the root of our theme.
 
@@ -15,7 +15,7 @@ Next, we create a `*.libraries.yml` file. Let's call this `awesome.libraries.yml
 
 > We need `core/drupal` in order to take advantage of the `Drupal.behaviors`. To include the Drupal core version of jQuery, we add `core/jquery`. The final dependency is `core/jquery.once`, a jQuery plugin allowing to only apply a function once to an element.
 
-Back in our `awesome.info.yml` file, we now add the following lines, to include the new declared *library* into our theme.
+Back in our `awesome.info.yml` file, we add the following lines, to include the new declared *library* into our theme.
 
   libraries:
     - awesome/base

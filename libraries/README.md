@@ -68,7 +68,7 @@ Copied from the issue summary of [2377397](https://www.drupal.org/node/2377397):
 
 ## Summary
 
-@todo
+
 
 ## Core libraries
 
