@@ -17,8 +17,8 @@ Next, we create a `*.libraries.yml` file. Let's call this `awesome.libraries.yml
 
 Back in our `awesome.info.yml` file, we add the following lines, to include the new declared *library* into our theme.
 
-  libraries:
-    - awesome/base
+    libraries:
+      - awesome/base
 
 This includes our the custom javascript and the dependencies into our theme. In this example, both the custom script and the jQuery library are now included in our theme.
 
