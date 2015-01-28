@@ -29,7 +29,7 @@ To get a good example, let's take a look at `bartik.breakpoints.yml`:
       multipliers:
         - 1x
 
-Each breakpoint has it's own identifier. Bartik has 3 unique breakpoints: *mobile*, *narrow* and *wide*. Each breakpoint is defined as `{module or theme name}.{label}`, with `bartik.mobile` as an example. The name of the module or theme is used to make sure the identifier is unique. This way, modules can include breakpoint from each other.
+Each breakpoint has it's own identifier. Bartik has 3 unique breakpoints: *mobile*, *narrow* and *wide*. Each breakpoint is defined as `{module or theme name}.{label}`, with `bartik.mobile` as an example. The name of the module or theme is used to make sure the identifier is unique. This way, modules can include breakpoints from each other.
 
 ### label
 
