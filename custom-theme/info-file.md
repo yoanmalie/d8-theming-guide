@@ -64,33 +64,17 @@ Conclusion: the filename for a screenshot does not have to be `screenshot.png`, 
 
 #### Adding stylesheets
 
-@todo Change to asset libraries.
-
-It's of course important to know how to add stylesheets to your theme. Let's add a css file called `styles.css` (that lives inside the `css` directory: `/css/styles.css`) to our theme.
-
-	# Adding styles.css to our theme.
-	stylesheets:
-	  all:
-	    - css/styles.css
+It's of course important to know how to add stylesheets to your theme.
 
 > In Drupal 7, this could be achieved by adding the following line:  
 
 	stylesheets[all][] = css/style.css
 
-The css file is now added. The `all` keyword stands for the media tag inside the html `link` element that is used to add stylesheets:
+Using the line above, the css file would have been added. The `all` keyword stands for the media tag inside the html `link` element that is used to add stylesheets. It would print the following tag inside the `<head>` of our page:
 
 	<link rel="stylesheet" href="[stylesheet]" media="all" />
 
-So ... now that you know this, it's very easy to add a print stylesheet to our theme as well:
-
-	# Adding a print stylesheet to our theme.
-	stylesheets:
-	  print:
- 	    - css/print.css
-
-Inside the html:
-
-	<link rel="stylesheet" href="[stylesheet]" media="print" />
+In Drupal 8, both stylesheets and scripts should be added using libraries. Read more on how to create a library with css and javascript files in the **libraries** chapter.
 
 #### Overriding stylesheets
 
