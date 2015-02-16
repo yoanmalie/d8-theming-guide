@@ -6,4 +6,4 @@ Inside the `core/themes` lives a fourth folder (besides `bartik`, `seven` and `s
 
 A theme engines (template engine, template processor or template parser) is a software components that **combines data with templates** from themes and shows the result - the final HTML - to the user.
 
-![Template Engine image from Wikipedia](http://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/TempEngGen015.svg/440px-TempEngGen015.svg.png)
+![Template Engine image from Wikipedia]((https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/template-engine.png)
