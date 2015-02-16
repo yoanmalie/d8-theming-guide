@@ -16,3 +16,6 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+# The website for the book (separate repo)
+website
