@@ -1,6 +1,6 @@
 ## Licence
 
-This document is (currently) licenced with a [Attribution-NonCommercial-NoDerivatives 4.0 International](http://creativecommons.org/licenses/by-nc-nd/4.0/).
+This book is licenced with a [Attribution-NonCommercial-NoDerivatives 4.0 International](http://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 ### You are free to:
 

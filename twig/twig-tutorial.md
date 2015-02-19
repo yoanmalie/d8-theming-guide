@@ -31,7 +31,7 @@ To access a value from the arary, we simple use the name of the variable, follow
 
     {{ awesome_array.a_key }} # returns 'a_value'
     {{ awesome_array.another_key.foo }} # returns 'bar'
-  
+
 
 #### Twig filters
 
@@ -133,8 +133,8 @@ Another example, from the `field--node--title.html.twig` template:
     {% for item in items %}
       {{ item.content }}
     {% endfor %}
- 
-Inside of a for loop block you can access some special variables. 
+
+Inside of a for loop block you can access some special variables.
 
 | Variable       | Description                                                    |
 |----------------|----------------------------------------------------------------|
@@ -142,8 +142,8 @@ Inside of a for loop block you can access some special variables.
 | items.index0    | The current iteration of the loop. (0 indexed)                |
 | items.revindex  | The number of iterations from the end of the loop (1 indexed) |
 | items.revindex0 | The number of iterations from the end of the loop (0 indexed) |
-| items.first     | True if first iteration                                       |
-| items.last      | True if last iteration                                        |
+| items.first     | `True` if first iteration                                       |
+| items.last      | `True` if last iteration                                        |
 | items.length    | The number of items in the sequence                           |
 | items.parent    | The parent context                                            |
 
@@ -163,11 +163,11 @@ Sometimes it might be useful to define variables in a template file. `{% set foo
 
     example.twig.php
     ---
-    
+
     {% set foo="bar" %}
-    
+
     # Other code here
-    
+
     Hi, here's my variable: {{ foo }}
 
 The variable can be a single value, as mentioned in the example above, but it can also be an array:
@@ -181,4 +181,3 @@ The variable can be a single value, as mentioned in the example above, but it ca
         'bar',
       ]
     %}
-

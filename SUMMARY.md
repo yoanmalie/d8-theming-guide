@@ -1,7 +1,6 @@
 * [Hello world](introduction/README.md)
   * [About me](introduction/about-me.md)
   * [Licence](introduction/licence.md)
-  * [Example code](introduction/example-code.md)
 * [Drupal 8](drupal8/README.md)
   * [Changes](drupal8/changes.md)
   * [Coding standards](drupal8/coding-standards.md)

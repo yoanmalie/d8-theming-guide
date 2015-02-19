@@ -1,6 +1,6 @@
 ## Coding standards
 
-It's important to know and follow the Drupal coding standards, especially when you want to get involved into Drupal core (theme) development. It's also useful to follow these standards in your own projects.
+It's important to know and follow the Drupal coding standards, especially when you want to get involved into Drupal core development. It's also useful to follow these coding standards in your own projects.
 
 There are coding standards for **css**, **javascript** and the new **Twig** template engine:
 
