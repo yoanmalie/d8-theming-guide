@@ -16,6 +16,10 @@ Drupal uses jQuery in a no-conflict mode. In jQuery, `$` is an alias for `jQuery
 
 ### Theme function (`Drupal.theme`)
 
+`Drupal.theme` is the client-side counterpart of the server-side `theme()`-function. Most of the server-side `theme()` function has been removed in Drupal 8. The client-side function however remains part of the Javascript API. All markup (defined in Javascript) should go through these theme functions.
+
+The beautify of this system is that it allows the reuse of theme functions as templates and the override of these functions in themes. A module can define a theme functions; a theme thats wants to change the markup can override the function to define it's own template.
+
 The `Drupal.theme` function [has been simplified](https://www.drupal.org/node/1816980).
 Previously it was possible to declare functions in `Drupal.theme.prototype`,
 where workaround code made `Drupal.theme()` behave as intended. Instead these
@@ -116,12 +120,12 @@ opportunity to ensure that the field elements have correct content
 in them before the form is serialized. The canonical use-case is so
 that WYSIWYG editors can update the hidden textarea to which they are
 bound.
-    
+
         (function ($) {
           'use strict';
           Drupal.behaviors.awesome = {
             attach: function(context, settings) {
-            
+
             },
             detach: function (context, settings, trigger) {
             }
