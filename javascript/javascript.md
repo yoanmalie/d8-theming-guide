@@ -4,9 +4,7 @@
 
 ### jQuery
 
-Drupal 8 doesn't load any additional scripts by default. This also means that a library like [jQuery is not included](https://www.drupal.org/node/1541860) on every page any more. This is mostly due to performance reasons:
-
-You have to declare jQuery (or any other core library) as a dependency for your script in order to use it. In the early stages of Drupal 8, this was done using `hook_library_info`. Since this was one of the last remaining hooks in Drupal 8, it got [replaced by a `*.libraries.yml` file](https://www.drupal.org/node/2201089).
+Drupal 8 doesn't load any additional scripts by default. This means that [jQuery is not included](https://www.drupal.org/node/1541860) on every page any more. This is mostly due to performance reasons: you don't need jQuery on every page, so Drupal should only load it when needed. In order to use jQuery, you have to declare jQuery (or any other core library) as a dependency for your script. In the early stages of Drupal 8, this was done using `hook_library_info`. Since this was one of the last remaining hooks in Drupal 8, it got [replaced by a `*.libraries.yml` file](https://www.drupal.org/node/2201089).
 
 > Since Drupal 8 does not support IE8 - and below - and because Javacript has evolved, [you might not need jQuery](http://youmightnotneedjquery.com/). If however you do want to use jQuery, make sure to look up the [best practices](http://lab.abhinayrathore.com/jquery-standards/) for using jQuery.
 
@@ -76,11 +74,9 @@ considered a better approach for declaring serveral functions.
 
 ### Drupal behaviors (`Drupal.behaviors`)
 
-Let's add some custom javascript to our theme. Our script will location in the
-`js` folder inside our theme (`/js/awesome.js`).
+Drupal behaviors (`Drupal.behaviors`) are still part of javascript in core. These behaviors will be executed on every request, including AJAX requests.
 
-`Drupal.behaviors` are still part of javascript in core. Let's open the
-`awesome.js` and add a little behavior.
+Below is an example of a Drupal Javascript Behavior.
 
     (function ($) {
       'use strict';
@@ -93,44 +89,50 @@ Let's add some custom javascript to our theme. Our script will location in the
 
 Let's have a quick look at what this does.
 
-The behavior has to have a unique namespace. In the example the namespace is
-`awesome` (`Drupal.behaviors.awesome`). The `context` variable is the part of
-the page for which this applies. This is especially useful when working with
-AJAX.  The `settings` variable is used to pass information from the PHP code to
-the javascript. Next is some custom code that creates a `p`aragraph-tag, with
-the text *Hello world*, and appends it to the `main`-tag. Using the
-`.once('awesome')` will make sure the code only runs once. It adds a
-`processed`- class to the `main` tag
-(`<main role="main" class="awesome-processed">`) in order to accomplish this.
+- **namespace**:
+A Drupal behavior has to have a unique namespace. In this example, the namespace is `awesome` (`Drupal.behaviors.awesome`).
 
-Alongside `attach` lives `detach`, which can be used to detach registered behaviors from a page element. Besides from a `context` and `settings`, it also expects a `trigger`. The `trigger` is a string containing the causing of the behavior to be detached. Possible causings (from `drupal.js`):
+- **attach**:
+Contains the actual function that should be executed.
 
-- *unload*: (default) The context element is being removed from the DOM.
-- *move*: The element is about to be moved within the DOM (for example,
-during a tabledrag row swap). After the move is completed,
-Drupal.attachBehaviors() is called, so that the behavior can undo
-whatever it did in response to the move. Many behaviors won't need to
-do anything simply in response to the element being moved, but because
-IFRAME elements reload their "src" when being moved within the DOM,
-behaviors bound to IFRAME elements (like WYSIWYG editors) may need to
-take some action.
-- *serialize*: When an Ajax form is submitted, this is called with the
-form as the context. This provides every behavior within the form an
-opportunity to ensure that the field elements have correct content
-in them before the form is serialized. The canonical use-case is so
-that WYSIWYG editors can update the hidden textarea to which they are
-bound.
+- **context**:
+The `context` variable is the part of the page for which this applies. On a page load, this will be the entire document. On a AJAX request however, the `context` variable will only contain all the newly loaded elements.
 
-        (function ($) {
-          'use strict';
-          Drupal.behaviors.awesome = {
-            attach: function(context, settings) {
+- **settings**:
+The `settings` variable is used to pass information from the PHP code to the javascript (`core/drupalSettings`).
 
-            },
-            detach: function (context, settings, trigger) {
-            }
-          };
-        }(jQuery));
+- **once**:
+Using the `.once('awesome')` will make sure the code only runs once. It adds a `processed`- class to the `main` tag (`<main role="main" class="awesome-processed">`) in order to accomplish this (`core/jquery.once`).
+
+
+    (function ($) {
+        'use strict';
+        Drupal.behaviors.awesome = {
+          attach: function(context, settings) {
+          },
+          detach: function (context, settings, trigger) {
+          }
+        };
+      }(jQuery));
+
+- **detach**:
+Alongside `attach` lives `detach`, which can be used to detach registered behaviors from a page element. Besides from a `context` and `settings`, it also expects a `trigger`. The `trigger` is a string containing the causing of the behavior to be detached. Possible causings are:
+
+  - *unload*: (default) The context element is being removed from the DOM.
+  - *move*: The element is about to be moved within the DOM (for example,
+  during a tabledrag row swap). After the move is completed,
+  Drupal.attachBehaviors() is called, so that the behavior can undo
+  whatever it did in response to the move. Many behaviors won't need to
+  do anything simply in response to the element being moved, but because
+  IFRAME elements reload their "src" when being moved within the DOM,
+  behaviors bound to IFRAME elements (like WYSIWYG editors) may need to
+  take some action.
+  - *serialize*: When an Ajax form is submitted, this is called with the
+  form as the context. This provides every behavior within the form an
+  opportunity to ensure that the field elements have correct content
+  in them before the form is serialized. The canonical use-case is so
+  that WYSIWYG editors can update the hidden textarea to which they are
+  bound.
 
 ### File-closure
 
