@@ -73,6 +73,8 @@ Main difference: dedicated function to alter the suggestion (instead of preproce
       $suggestions[] = 'node__' . 'my_second_suggestion';
     }
 
+@todo: Overview image of the new theme system.
+
 ***
 
 **Read more**
