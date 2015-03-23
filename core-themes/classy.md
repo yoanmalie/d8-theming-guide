@@ -26,7 +26,7 @@ Themers no longer require a base theme like [mothership](https://www.drupal.org/
 ### Classy, a new base theme
 
 At DrupalCon Amsterdam, the **classy.info.yml** got commited into Drupal 8 core by Dries. The change record can be found [here](https://www.drupal.org/node/2337467).
-This means Classy is the new `base theme` in Drupal core where *Bartik* and *Seven* are both extending from. 
+This means Classy is the new `base theme` in Drupal core where *Bartik* and *Seven* are both extending from.
 
 [Add classy.info.yml to core, set Classy as base theme for Bartik and Seven](https://www.drupal.org/node/2329501)
 

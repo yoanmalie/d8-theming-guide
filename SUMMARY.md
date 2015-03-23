@@ -9,6 +9,7 @@
   * [Seven](core-themes/seven.md)
   * [Stark](core-themes/stark.md)
   * [Classy](core-themes/classy.md)
+* [The new theme layer](new-theming-layer/README.md)
 * [Theme engines](theme-engines/README.md)
   * [PHPTemplate](theme-engines/phptemplate.md)
   * [Twig](theme-engines/twig.md)

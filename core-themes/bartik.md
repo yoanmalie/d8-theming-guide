@@ -11,7 +11,7 @@ During the development of Drupal 8, the Bartik theme was bairly making progress.
 - new maintainer: Emma
 - interview with Emma
 
-![Bartik screenshot](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/bartik.png)
+![Bartik screenshot](../img/bartik.png)
 
 ***
 

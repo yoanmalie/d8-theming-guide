@@ -6,7 +6,7 @@
 
 To avoid obscuring CSS added to the page by Drupal or a contrib module, the Stark theme itself has no styling, except just enough CSS to arrange the page in a traditional "header, sidebars, content, and footer" layout. Thanks to the Drupal 8 Mobile Initiative, [Stark uses a responsive layout in Drupal 8](https://www.drupal.org/node/1322794). The css rules for this responsive layout can be found in `css/layout.css`.
 
-![Stark screenshot](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/stark.png)
+![Stark screenshot](../img/stark.png)
 
 ***
 
