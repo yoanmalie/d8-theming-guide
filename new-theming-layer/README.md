@@ -6,7 +6,7 @@ Drupal 8 comes with a completely new theme layer. The most significant change of
 
 ![A simplified wiring guide to the Theme Layer](../img/theme-system.png)
 
-*A simplified wiring guide to the Theme Layer, by **John Albin***
+*A simplified wiring guide to the Theme Layer, by **John Albin** *
 
 - Drupal-specific template conventions
 - With PHPTemplate, anything was possible; such as dropping your entire database from a template file. This made PHPTemplate - and the whole theming layer - very insecure.
