@@ -42,7 +42,7 @@ Inside the `.info.yml` file the library can be included into our theme, using th
     libraries:
       - example/base
 
-This means the *example* theme has a dependency on the `base` library (from the *example* theme/module); `example/base`. The `base` library itself contains a single javascript file (`scripts.js`), a css file (categoried as a component) and has dependencies on the `drupal` and `jquery` library from core.
+The *example* theme now has a global dependency on the `base` library (from the *example* theme/module); `example/base`. Therefor it's included on **every page** The `base` library itself contains a single javascript file (`scripts.js`), a css file (categoried as a component) and has dependencies on the `drupal` and `jquery` library from core.
 
 ## The history of libraries, part 2
 
@@ -66,9 +66,11 @@ Copied from the issue summary of [2377397](https://www.drupal.org/node/2377397):
 4. libraries can contain CSS and JS as logically associated units, and can declare dependencies on other libraries
 5. themes are encouraged to create a library per component/topic/logical unit and hence are encouraged to not load all their CSS on all pages anymore, but to attach it when appropriate in a preprocess hook and/or only on the relevant pages via hook_page_attachments_alter()
 
-## Summary
+## Attach libraries directly from a template file
 
+As mentioned, the libraries inside the `*.info.yml` file are include globally, on every page. To conditionally add a library, you had to use a `preprocess` function (`#attached`); just like in Drupal 7. In order to improve the theming experience, a simple Twig function has been added to easify this. ``{{ attach_library('theme/library') }}`` makes it possible to add libraries directy from template files.
 
+> The only template files that doesn't support this is **html.html.twig**. More information can be found [here](https://www.drupal.org/node/2398331#comment-9745117).
 
 ## Core libraries
 
