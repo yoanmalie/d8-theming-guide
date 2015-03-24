@@ -34,6 +34,14 @@ Twig makes the Drupal theme layer much more secure. It's impossible to run PHP s
 
 All of the PHPTemplate files (\*.tpl.php) were converted to Twig template files (\*.twig.html).
 
+### Converting `theme()` functions to Twig templates
+
+**DO.O**
+
+- [Convert core theme functions to Twig templates](https://www.drupal.org/node/1757550)
+
+All of the `theme()` functions are deprecated in Drupal 8?. They are all converted into twig template files.
+
 ### Removing the template process layer
 
 **D.O**
@@ -44,14 +52,6 @@ All of the PHPTemplate files (\*.tpl.php) were converted to Twig template files 
 > The process layer was only created because we needed a place to flatten complicated data structures such as objects or arrays into strings. In practice, render arrays themselves allow for late rendering via theme function or template file (and can be manipulated in other preprocess functions), and objects can implement __toString methods for printing. There is no longer a need for this whole extra layer of processing before rendering.
 
 @todo: lazy rendering, keep the data structure and render only at the "latest" point
-
-### Converting `theme()` functions to Twig templates
-
-**DO.O**
-
-- [Convert core theme functions to Twig templates](https://www.drupal.org/node/1757550)
-
-All of the `theme()` functions are deprecated in Drupal 8?. They are all converted into twig template files.
 
 ### Theme suggestion hooks
 
