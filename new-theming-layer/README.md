@@ -55,7 +55,7 @@ All of the `theme()` functions are deprecated in Drupal 8?. They are all convert
 
 ### Theme suggestion hooks
 
-Main difference: dedicated function to alter the suggestion (instead of preprocess)
+This hook allows any module or theme to provide altenative theme function or template name suggestions and reorder or remove suggestions provided by `hook_theme_suggestions_HOOK()` or by earlier invocations of this hook.
 
 **Drupal 7:**
 
@@ -64,8 +64,8 @@ Main difference: dedicated function to alter the suggestion (instead of preproce
     * Implements hook_preprocess_HOOK() for node templates.
     */
     function MYTHEME_preprocess_node(&$variables) {
-      $variables['theme_hook_suggestions'][] = 'node__' . 'my_first_suggestion';
-      $variables['theme_hook_suggestions'][] = 'node__' . 'my_second_more_specific_suggestion';
+      $variables['theme_hook_suggestions'][] = 'node__' . 'first';
+      $variables['theme_hook_suggestions'][] = 'node__' . 'second';
     }
 
 **Drupal 8:**
@@ -75,8 +75,8 @@ Main difference: dedicated function to alter the suggestion (instead of preproce
     * Implements hook_theme_suggestions_HOOK_alter() for node templates.
     */
     function MYTHEME_theme_suggestions_node_alter(array &$suggestions, array $variables) {
-      $suggestions[] = 'node__' . 'my_first_suggestion';
-      $suggestions[] = 'node__' . 'my_second_suggestion';
+      $suggestions[] = 'node__' . 'first';
+      $suggestions[] = 'node__' . 'second';
     }
 
 @todo: Overview image of the new theme system.
