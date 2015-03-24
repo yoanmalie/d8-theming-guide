@@ -32,7 +32,7 @@ After a discussion about all the different templating languages, their advantage
 
 Twig makes the Drupal theme layer much more secure. It's impossible to run PHP scripts, make database calls or access the file system. Autoescaping is also enabled by default (more detail in the Twig chapter), a major improvement concerning XSS (Cross-site scripting).
 
-All of the PHPTemplate files were converted to Twig template files.
+All of the PHPTemplate files (\*.tpl.php) were converted to Twig template files (\*.twig.html).
 
 ### Removing the template process layer
 
@@ -47,7 +47,11 @@ All of the PHPTemplate files were converted to Twig template files.
 
 ### Converting `theme()` functions to Twig templates
 
-The `theme()` functions are deprecated in Drupal 8 and are all being converted into twig template files.
+**DO.O**
+
+- [Convert core theme functions to Twig templates](https://www.drupal.org/node/1757550)
+
+All of the `theme()` functions are deprecated in Drupal 8?. They are all converted into twig template files.
 
 ### Theme suggestion hooks
 
