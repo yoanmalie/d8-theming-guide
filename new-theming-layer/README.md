@@ -15,7 +15,8 @@ Drupal 8 comes with a completely new theme layer. The old theme layer was a big 
   - `<?php print $node->nid; ?> // object`
   - `<?php print $attributes; ?> // string`
   - `<?php print render($content); ?> // array`
-  In the first example, a parameter from an object is printed. In the second example, a string is printed. In the last example, the $content variable is a render array. The render() function converts this (render) array to HTML markup. Since it returns HTML, it should be used along with print in templates. 
+ 
+In the first example, a parameter from an object is printed. In the second example, a string is printed. In the last example, the $content variable is a render array. The render() function converts this (render) array to HTML markup. Since it returns HTML, it should be used along with print in templates. 
 - There were too many template files.
 - Besides template files, Drupal 7 also used `theme()` function. There were even more `theme()` functions as template files. These PHP functions were used to create a string containing html markup based on (more) some complex logic.
 - The theme layer was a complex system (of subsystems), almost "impossible" to understand. This wasn't just for people new to Drupal. Even people working on core daily got confused and frustrated about the system. This makes Drupal 7 hard to learn and is one of the reasons the **learning curve** is so high.
