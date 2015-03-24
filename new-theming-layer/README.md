@@ -1,6 +1,6 @@
 # The new theme layer
 
-Drupal 8 comes with a completely new theme layer. The most significant change of this new layer is of course **Twig**. The old theme layer was a big frustation for front-end developers. Before diving into the new theme layer, let's take a closer look at the *old* one and sum up some of these frustrations and disadvantages.
+Drupal 8 comes with a completely new theme layer. The old theme layer was a big frustation for front-end developers and was far too complext. The most significant change of the new layer is **Twig**. Before diving into this layer, let's take a closer look at the *old* one and sum up some disadvantages.
 
 ## The Drupal 7 theme layer
 
@@ -9,15 +9,16 @@ Drupal 8 comes with a completely new theme layer. The most significant change of
 > *A simplified wiring guide to the Theme Layer, by John Albin*
 
 - Drupal-specific template conventions
-- With PHPTemplate, anything was possible; such as dropping your entire database from a template file. This made PHPTemplate - and the whole theming layer - very insecure.
-- There are three different ways of printing content. Below are three examples. In the first example, a parameter from `an object` is printed. In the second example, a `string` is printed. In the last example, the `$content` variable is a render array. The `render()` function converts this (render) array to HTML markup. Since it returns HTML, it should be used along with print in templates. It's unclear for people unfamiliar to PHP how to display content in a template file.
+- With **PHPTemplate**, anything was possible; even dropping your entire database from a template file. This made PHPTemplate - and the whole theming layer - very insecure.
+- There are too many different ways of printing content. Below are three examples. For people unfamiliar to PHP it's unclear how to display content in a template file. 
   From `node.tpl.php`:
   - `<?php print $node->nid; ?> // object`
   - `<?php print $attributes; ?> // string`
   - `<?php print render($content); ?> // array`
+  In the first example, a parameter from an object is printed. In the second example, a string is printed. In the last example, the $content variable is a render array. The render() function converts this (render) array to HTML markup. Since it returns HTML, it should be used along with print in templates. 
 - There were too many template files.
-- Besides template files, Drupal 7 also used `theme()` function. There were about three times as much `theme()` functions as there were template files. These PHP functions were used to create a string containing html markup based on (more) some complex logic.
-- The theme layer was a complex system (of subsystems), almost "impossible" to understand. This wasn't just for people new to Drupal. Even people working on core daily got confused and frustrated about the system. This made Drupal 7 hard to learn.
+- Besides template files, Drupal 7 also used `theme()` function. There were even more `theme()` functions as template files. These PHP functions were used to create a string containing html markup based on (more) some complex logic.
+- The theme layer was a complex system (of subsystems), almost "impossible" to understand. This wasn't just for people new to Drupal. Even people working on core daily got confused and frustrated about the system. This makes Drupal 7 hard to learn and is one of the reasons the **learning curve** is so high.
 
 ## The new theme layer
 
