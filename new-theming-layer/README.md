@@ -23,7 +23,7 @@ Drupal 8 comes with a completely new theme layer. The most significant change of
 
 ### Removing PHP Template
 
-After a discussion about all the different templating languages, their advantages, disadvantages and their features the decision was made to include the Twig templating engine from the Symfony framework. Drupal could have created it's own, new, PHP based “token" system, but that way Drupal would still be on it's own. By introducing Twig, we are moving from our Drupal island (see blog post in read more). Twig is, just like Symfony, maintained by Sensio Labs. The fact that Drupal adopts Symfony components doesn't necessarily have anything to do with the fact that **Twig** as the new templating language. Twig was chosen because it was the best choice after comparing various templating languages.
+After a discussion about all the different templating languages, their advantages, disadvantages and their features the decision was made to include the Twig templating engine from the Symfony framework. Drupal could have created it's own, new, PHP based “token" system, but that way Drupal would still be on it's own. By introducing Twig, we are moving from our Drupal island (Read more: Larry Garfield). Twig is, just like Symfony, maintained by Sensio Labs. The fact that Drupal adopts Symfony components doesn't necessarily have anything to do with the fact that **Twig** as the new templating language. Twig was chosen because it was the best choice after comparing various templating languages.
 
 > "… We don't have Twig because we have Symfony. It's more that,  we have Twig because it's **AWESOME**"
 > *- Scott Reeves, **@Cottser***
@@ -79,7 +79,7 @@ Main difference: dedicated function to alter the suggestion (instead of preproce
 
 **Read more**
 
-[Blog post about the future of Drupal](http://www.garfieldtech.com/blog/off-the-island-2013), a blog post by Larry Garfield.
-[Drupal 8's new theming layer](https://www.youtube.com/watch?v=Gp3lforZ3ZE), a video interview with Joël Pittet and Scott Reeves.
-[The "themer" role is a Drupalism](http://dqxtech.net/blog/2014-10-06/themer-role-drupalism), a blog post by …
-[Rethinking Drupal’s Theme/Render Layer](http://john.albin.net/drupal/arrays-of-doom), a blog post by by John Albin.
+- [Blog post about the future of Drupal](http://www.garfieldtech.com/blog/off-the-island-2013), a blog post by Larry Garfield.
+- [Drupal 8's new theming layer](https://www.youtube.com/watch?v=Gp3lforZ3ZE), a video interview with Joël Pittet and Scott Reeves.
+- [The "themer" role is a Drupalism](http://dqxtech.net/blog/2014-10-06/themer-role-drupalism), a blog post by …
+- [Rethinking Drupal’s Theme/Render Layer](http://john.albin.net/drupal/arrays-of-doom), a blog post by by John Albin.
