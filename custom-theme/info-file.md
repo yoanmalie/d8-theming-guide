@@ -64,16 +64,6 @@ Conclusion: the filename for a screenshot does not have to be `screenshot.png`, 
 
 #### Adding stylesheets
 
-It's of course important to know how to add stylesheets to your theme.
-
-> In Drupal 7, this could be achieved by adding the following line:  
-
-	stylesheets[all][] = css/style.css
-
-Using the line above, the css file would have been added. The `all` keyword stands for the media tag inside the html `link` element that is used to add stylesheets. It would print the following tag inside the `<head>` of our page:
-
-	<link rel="stylesheet" href="[stylesheet]" media="all" />
-
 In Drupal 8, both stylesheets and scripts should be added using libraries. Read more on how to create a library with css and javascript files in the **libraries** chapter.
 
 #### Overriding stylesheets
