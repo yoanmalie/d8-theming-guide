@@ -1,6 +1,8 @@
 ## Stark
 
-*Stark* is a core theme that demonstrates Drupal's default markup. It does not contain any template files. This means it uses the template and css files from the (core) modules.
+*Stark* is a core theme that demonstrates Drupal's default markup. It does not contain any template or css files. This means it uses the templates and css files from Drupal (core) modules.
+
+> In Drupal 7, Stark contained css for the layout, the regions of the page. At first, the Stark layout was made responsive [Make Stark use a responsive layout](https://www.drupal.org/node/1322794), but the css for that has been removed ([Remove all visual from stark]()https://www.drupal.org/node/2349711). This way, Stark now only outputs html and css from modules.
 
 *Stark* can be very useful for **developers** to determine whether module-related CSS and JavaScript are interfering with a more complex theme. It can also be useful for **designers** interested in studying Drupal’s default markup without the interference of changes commonly made by more complex themes.
 
