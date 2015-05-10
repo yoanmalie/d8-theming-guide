@@ -16,7 +16,7 @@ Drupal 8 uses the **SMACSS** system to conceptually categorize CSS rules.
 2. Layout
 3. Component (The official **SMACSS** theminoly for this is *modules*. Since *modules* have a different meaning in Drupal, this category was renamed to *component* to avoid confusion.)
 4. State
-5. Theme (Sometimes also called **skin**)
+5. Theme (Sometimes also called **skin**, again since avoid the confusion with Drupal *themes*.)
 
 More information about SMACSS can be found on the [SMACSS](https://smacss.com/) website.
 
@@ -38,6 +38,8 @@ These folder contain the stylesheet (`.css` files) for each corresponding catego
 ### BEM
 
 BEM (Block Element Modifier) is a naming convention.
+
+@Todo: Might not be relevant any more, doesn't seem to be a part of the coding standards any more.
 
 `.block__element--modifier`
 
