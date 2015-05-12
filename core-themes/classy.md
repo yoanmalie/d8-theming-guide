@@ -3,7 +3,7 @@
 
 `<div class="do-not-add-classes-in-drupal-core"></div>`
 
-At DrupalCon Austin (2014) the need for a new core *base* theme came up. This need was part of **Consensus Banana**.
+At DrupalCon Austin (2014) the need for a new core *base* theme came up. This need was part of - was is befing refered to as - **Consensus Banana**.
 
 ### Consensus Banana
 

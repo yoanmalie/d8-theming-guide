@@ -8,6 +8,8 @@
 
 *Stark* can be very useful for **developers** to determine whether module-related CSS and JavaScript are interfering with a more complex theme. It can also be useful for **designers** interested in studying Drupal’s default markup without the interference of changes commonly made by more complex themes.
 
+> In a nutshell, Stark outputs vanilla Drupal css and html.
+
 ![Stark screenshot](../img/stark.png)
 
 ***

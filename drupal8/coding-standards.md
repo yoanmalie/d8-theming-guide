@@ -8,6 +8,10 @@ There are coding standards for **css**, **javascript** and the new **Twig** temp
 - [Javascript Coding standards](https://www.drupal.org/node/172169).
 - [Twig Coding standards](https://www.drupal.org/node/1823416).
 
+## CSS
+
+The CSS coding standards are based upon two very popular methodologies called SMACSS and BEM.
+
 ### SMACSS
 
 Drupal 8 uses the **SMACSS** system to conceptually categorize CSS rules.
@@ -16,7 +20,7 @@ Drupal 8 uses the **SMACSS** system to conceptually categorize CSS rules.
 2. Layout
 3. Component (The official **SMACSS** theminoly for this is *modules*. Since *modules* have a different meaning in Drupal, this category was renamed to *component* to avoid confusion.)
 4. State
-5. Theme (Sometimes also called **skin**, again since avoid the confusion with Drupal *themes*.)
+5. Theme (Sometimes also called **skin**, again to avoid the confusion with the Drupal term *themes*.)
 
 More information about SMACSS can be found on the [SMACSS](https://smacss.com/) website.
 
@@ -37,9 +41,7 @@ These folder contain the stylesheet (`.css` files) for each corresponding catego
 
 ### BEM
 
-BEM (Block Element Modifier) is a naming convention.
-
-@Todo: Might not be relevant any more, doesn't seem to be a part of the coding standards any more.
+BEM (Block Element Modifier) is a naming convention. The Drupal 8 CSS class names are based on the BEM methodology, resulting in more transparency and meaning.
 
 `.block__element--modifier`
 

@@ -7,7 +7,3 @@ Inside the `core/themes` lives a fourth folder (besides `bartik`, `seven`, `star
 A theme engine (also called template engine, template processor or template parser) is a software components that **combines data with templates** from themes and shows the result - the final HTML - to the user.
 
 ![Template Engine](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/template-engine.png)
-
-## `theme_`-functions
-
-This section is dedicated to all people who have been dealing with `theme_`-functions in Drupal 7. All of these function are gone and have been replaced with template files. 
