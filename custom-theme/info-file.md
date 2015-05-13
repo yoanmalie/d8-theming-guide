@@ -60,27 +60,31 @@ If everything went well, you should be able to see the screenshot:
 
 ![https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/awesome_theme_screenshot.png](https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/awesome_theme_screenshot.png)
 
-Conclusion: the filename for a screenshot does not have to be `screenshot.png`, as long as it is defined in the *{theme}.info.yml* file.
+The screenshot of cause doesn't have to be a `*.png`. It can be an `*.svg` or even an animated `*.gif`
+
+**Conclusion:** the filename for a screenshot does not have to be `screenshot.png`, as long as it is defined in the *{theme}.info.yml* file.
 
 #### Adding stylesheets
 
 In Drupal 8, both stylesheets and scripts should be added using libraries. Read more on how to create a library with css and javascript files in the **libraries** chapter.
 
-#### Overriding stylesheets
-
-In Drupal 8, drupal.base.css has been replaced with normalize.css ([see this change record](https://www.drupal.org/node/2168417)). If you want to include a different version of normalize.css, you can override this file.
-
-	# Remove a CSS file:​
-	stylesheets-override:
-	  - normalize.css
-
 #### Removing stylesheets
 
-Alternatively, we can also completely remove a css file.
+Alternatively, a stylesheet can also be removed.
 
 	# Remove a CSS file:​
 	stylesheets-remove:
-	  - normalize.css
+	  - core/assets/vendor/jquery.ui/themes/base/dialog.css
+
+To remove a stylesheet, the full path to the css file should be used (instead of just a file name). This due to the fact that multiple css files can have the same name.
+
+In cases where a Drupal core asset is being removed the full file path is needed. In cases where the file is part of a library that belongs to a module or theme, a token can be used.
+
+> When using a token, it needs to be quoted because `@` is a reserved indicator in YAML.
+
+	# Removing a stylesheet from Bartik using the @ token.
+	stylesheets-remove:
+  	- '@bartik/css/style.css'
 
 #### Regions
 
@@ -94,7 +98,7 @@ Regions can be defined using the `regions` tag. Here is an example where 3 regio
 
 #### Regions hidden
 
-The `regions_hidden` can be applied to any previous defined *regions*. Regions with this attribute will not show up on the block administration page. This means they can't have blocks assigned to them by ordinary mechanisms. For example, Drupal uses this feature to protect the special 'page_top' and 'page_bottom' regions from adventurous themers. This can be used by module writers and theme writers to protect a given region from having unexpected content inserted into the output. The `seven.info.yml` contains this tag, in order to *hide* the 'Sidebar First' region.
+The `regions_hidden` can be applied to any previous defined *regions*. Regions with this attribute will not show up on the block administration page. This means they can't have blocks assigned to them by ordinary mechanisms. Drupal uses this feature to protect the special 'page_top' and 'page_bottom' regions from adventurous themers. This can be used by module writers and theme writers to protect a given region from having unexpected content inserted into the output. The `seven.info.yml` contains this tag, in order to *hide* the 'Sidebar First' region.
 
 	regions_hidden:
   	- sidebar_first
