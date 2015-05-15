@@ -8,7 +8,7 @@ There are coding standards for **css**, **javascript** and the new **Twig** temp
 
 ## CSS
 
-The CSS coding standards are based upon two very popular methodologies called SMACSS and BEM. They are based on the **DRY** principle, **Don't Repeat Yourself**.
+The CSS coding standards are based upon two very popular methodologies called SMACSS and BEM. They are also based on the **DRY** principle: **Don't Repeat Yourself**.
 
 ### SMACSS
 
