@@ -1,3 +1,5 @@
 # Twig
 
-In the previous chapter you got introduced to Twig, the new template engine for Drupal 8. In this chapter you'll learn the basics of working with this template engine. The first version was released on October 12, 2009. The syntax originates from Jinja and Django templates. Currently, Twig is maintained by **Fabien Potencier**.
+In the previous chapter, Twig got introduced. The new template engine for Drupal. In this chapter, the basics to work with this template engine will be shown.
+
+The first version of Twig was released on October 12, 2009. The syntax originates from Jinja and Django templates. Currently, Twig is maintained by **Fabien Potencier**.

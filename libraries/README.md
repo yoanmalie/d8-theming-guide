@@ -91,3 +91,29 @@ To include the Drupal core version of jQuery, we add `core/jquery`.
 - `core/jquery.once`
 
 A jQuery plugin allowing to only apply a function once to an element.
+
+> There are plenty more libraries in core.
+
+## Adding a javascript library
+
+Here is an example of how to add a custom javascript file to theme.
+
+First, create a `*.libraries.yml` file, e.g. `awesome.libraries.yml` (`{theme-or-module-name}`.libraries.yml) and save it into the root of our theme.
+
+    base:
+      version: 1.x
+      js:
+        js/awesome.js: {}
+      dependencies:
+        - core/drupal
+        - core/jquery
+        - core/jquery.once
+
+> We need `core/drupal` in order to take advantage of the `Drupal.behaviors`. To include the Drupal core version of jQuery, we add `core/jquery`. The final dependency is `core/jquery.once`, a jQuery plugin allowing to only apply a function once to an element.
+
+In the `*.info.yml` file of the theme (or module), add the following lines, to include the new declared *library* into the theme (or module).
+
+    libraries:
+      - awesome/base
+
+This includes the custom javascript (and makes sure the dependencies are loaded). In this example, Drupal will make sure that jQuery is loaded before importing `awesome.js`.

@@ -1,7 +1,5 @@
 ## Coding standards
 
-It's important to know and follow the Drupal coding standards, especially when you want to get involved into Drupal core development. It's also useful to follow these coding standards in your own projects.
-
 There are coding standards for **css**, **javascript** and the new **Twig** template engine:
 
 - [CSS Coding standards](https://www.drupal.org/node/1886770).
@@ -10,17 +8,50 @@ There are coding standards for **css**, **javascript** and the new **Twig** temp
 
 ## CSS
 
-The CSS coding standards are based upon two very popular methodologies called SMACSS and BEM.
+The CSS coding standards are based upon two very popular methodologies called SMACSS and BEM. They are based on the **DRY** principle, **Don't Repeat Yourself**.
 
 ### SMACSS
 
-Drupal 8 uses the **SMACSS** system to conceptually categorize CSS rules.
+SMACSS (pronounced “smacks”) stands for **Scalable and Modular Architecture for CSS**. Drupal 8 uses **SMACSS** to conceptually categorize CSS rules inside libarries.
 
-1. Base
-2. Layout
-3. Component (The official **SMACSS** theminoly for this is *modules*. Since *modules* have a different meaning in Drupal, this category was renamed to *component* to avoid confusion.)
-4. State
-5. Theme (Sometimes also called **skin**, again to avoid the confusion with the Drupal term *themes*.)
+#### Base
+
+> **Base** usually contains a [css reset](http://cssreset.com/scripts/eric-meyer-reset-css/) or a [normalize](http://cssreset.com/scripts/normalize-css/), and HTML element styling. Drupal 8 ships with **normalize.css** inside the *system* module.
+
+#### Layout
+
+> **Layout** rules define the composition of common primary modules that typically appear on every page. CSS from **Grid systems** is also categorized here.
+
+#### Component
+
+The official **SMACSS** terminology for this is *modules*. Since *modules* have a different meaning in Drupal, this category was renamed to *component* to avoid confusion.
+
+> **Components** are discrete and reusable elements of the UI. Component rules should be reusable and flexible. Examples of components are carousels, dialogs, widgets, …
+
+#### State
+
+> A **state** is something that augments and overrides all other styles. Typically they describe a certain action or trigger. The best example is the `is-active` state, used to mark an item as *active*. These classes typically start with the `is-` prefix.
+
+#### Theme
+
+Sometimes also called **skin**, again to avoid the confusion with the Drupal term *themes*.
+
+> A **theme** defines colors and/or images to give a certain look and feel to any of the previous element.
+
+<div style="float: left; margin-right: 10px;">
+![](../img/icons/pensil.png)
+</div>
+
+    // component.css
+    .component {
+        border: 1px solid;
+    }
+
+    // theme.css
+    .component {
+        border-color: blue;
+    }
+
 
 More information about SMACSS can be found on the [SMACSS](https://smacss.com/) website.
 

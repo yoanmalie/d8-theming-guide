@@ -2,7 +2,7 @@
 
 The four Drupal 8 **core** themes live inside the `core/themes` folder. As part of the Drupal 8 Mobile Initiative all of Drupal core's themes have been converted to a  responsive design.
 
-> **NOTE** Stark had a stylesheet inside the theme to make sure the regions were responsive. However, this stylesheet got removed. **Read more on this in the Stark section.**
+> **NOTE:** Stark had a stylesheet inside the theme to make sure the regions were responsive. However, this stylesheet got removed. **Read more on this in the Stark section.**
 
 - **bartik**: *A flexible, recolorable theme with many regions and a responsive, mobile-first layout.*
 - **seven**: *The default administration theme for Drupal 8 was designed with clean lines, simple blocks, and sans-serif font to emphasize the tools and tasks at hand.*

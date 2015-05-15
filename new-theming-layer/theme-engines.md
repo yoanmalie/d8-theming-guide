@@ -1,6 +1,6 @@
 # Theme engines
 
-Inside the `core/themes` lives a fourth folder (besides `bartik`, `seven`, `stark` and `classy`), called `engines`. This folder contains the theme engines. In Drupal 8, the default template engine is **Twig**. The default template engine from Drupal 7 hoverever, PHPTemplate, does still live in there. Although it's not recommended to continue using the engine, it might be useful when you're migrating your Drupal 7 sites to Drupal 8. Bare in mind that Twig has a lot more to offer and is more secure than PHPTemplate.
+Inside the `core/themes` lives a fifth folder (besides `bartik`, `seven`, `stark` and `classy`), called `engines`. This folder contains the theme engines. The default template engine In Drupal 8 is **Twig**. The default template engine from Drupal 7 however, PHPTemplate, does still live in there. It's not recommended to continue using the engine. Bare in mind that Twig has a lot more to offer and is much more secure than PHPTemplate.
 
 ## What is a theme engine?
 
