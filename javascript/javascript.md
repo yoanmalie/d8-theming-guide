@@ -82,7 +82,7 @@ Below is an example of a Drupal Javascript Behavior.
       'use strict';
       Drupal.behaviors.awesome = {
         attach: function(context, settings) {
-          $('main').once('awesome').append('<p>Hello world</p>');
+          $('main', context).once('awesome').append('<p>Hello world</p>');
         }
       };
     }(jQuery));
