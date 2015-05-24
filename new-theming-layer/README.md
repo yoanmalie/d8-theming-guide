@@ -27,7 +27,7 @@ Drupal 8 comes with a completely new theme layer. The old theme layer was a big 
 
 ## The new theme layer
 
-The Drupal 8 theme system is maintained by a couple of people:
+The Drupal 8 theme system is maintained by the following people:
 
 - [Alex Bronstein 'effulgentsia'](http://drupal.org/user/78040)
 - [John Albin Wilkins 'JohnAlbin'](http://drupal.org/user/32095)
@@ -38,7 +38,7 @@ The Drupal 8 theme system is maintained by a couple of people:
 
 ### Removing PHP Template
 
-After a discussion about all the different templating languages, their advantages, disadvantages and their features the decision was made to include the Twig templating engine from the Symfony framework. Drupal could have created it's own, new, PHP based “token" system, but that way Drupal would still be on it's own. By introducing Twig, we are moving from our Drupal island. Twig is, just like Symfony, maintained by Sensio Labs. The fact that Drupal adopts Symfony components doesn't necessarily have anything to do with the fact that **Twig** as the new templating language. Twig was chosen because it was the best choice after comparing various templating languages.
+After a discussion about the advantages, disadvantages and features of various templating languages, the decision was made to include the Twig templating engine from the Symfony framework. Drupal could have created its own, new, PHP based “token" system, but that way Drupal would still be on its own. By introducing Twig, we are moving away from our Drupal island. Twig is, just like Symfony, maintained by Sensio Labs. The fact that Drupal adopts Symfony components doesn't necessarily have anything to do with the adoption of **Twig** as the new templating language. Twig was chosen because it was the best choice after comparing various templating languages.
 
 > "… We don't have Twig because we have Symfony. It's more that,  we have Twig because it's **AWESOME**"
   *- Scott Reeves, @Cottser*
