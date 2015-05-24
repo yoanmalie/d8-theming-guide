@@ -6,7 +6,7 @@
 
 ### Moving Bartik forward
 
-During the development of Drupal 8, the Bartik theme was bairly making any progress. For this reason, the maintainership for the theme has changed. [Emma Karayiannis](https://www.drupal.org/u/emma.maria) is the new Bartik maintainer. This happend after the first couple of beta's. Since then, Bartik really started to move forward again.
+During the development of Drupal 8, the Bartik theme was barely making any progress. For this reason, the maintainership for the theme has changed. [Emma Karayiannis](https://www.drupal.org/u/emma.maria) is the new Bartik maintainer. This happened after the first couple of betas. Since then, Bartik really started to move forward again.
 
 ![Bartik screenshot](../img/bartik.png)
 
