@@ -3,7 +3,7 @@
 
 `<div class="do-not-add-classes-in-drupal-core"></div>`
 
-At DrupalCon Austin (2014) the need for a new core *base* theme came up. This need was part of - was is befing refered to as - **Consensus Banana**.
+At DrupalCon Austin (2014) the need for a new core *base* theme came up. This need was part of what has been referred to as the **Consensus Banana**.
 
 ### Consensus Banana
 
@@ -21,7 +21,7 @@ Here's a brief overview of [the meta issue](https://www.drupal.org/node/2289511)
 
 Technically it comes down to this: the classes from core have been moved into the classy base theme. This was done in two phases. During the first phase the classes have been moved out of preprocess functions and moved into core template files. In the second phase the core template files with classes have been moved into Classy meaning all of the classes have been removed from core templates. You could now say that all the template files in core are now 'classless' (=no more `class="whatever"` in core).
 
-Themers no longer require a base theme like [mothership](https://www.drupal.org/project/mothership) to *keelhaul the div*! A survey showed that not all themers want the same markup, and that they don't need all the wrapper <divs>. Thanks to Classy, no one has to waist any more time undoing core. The group of themers that want sensible default classes can use classy as a base theme when developoing their custom themes (more information on that later). The second group, that wants full control of all the markup and the classes, can start from scratch, without having to override anything, unlike the Drupal 7 experience.
+Themers no longer require a base theme like [mothership](https://www.drupal.org/project/mothership) to *keelhaul the div*! A survey showed that not all themers want the same markup, and that they don't need all the wrapper <divs>. Thanks to Classy, no one has to waste any more time undoing core. The group of themers that wants sensible default classes can use classy as a base theme when developing their custom themes (more information on that later). The second group, that wants full control of all the markup and the classes, can start from scratch, without having to override anything, unlike the Drupal 7 experience.
 
 ### Classy, a new base theme
 
