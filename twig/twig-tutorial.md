@@ -2,7 +2,7 @@
 
 ### Twig autoescape enabled
 
-> Escape a string means to reduce ambiguity characters in a string.
+> To escape a string means to reduce ambiguous characters in a string.
 
 [Twig autoescape enabled](https://www.drupal.org/node/2296163) by default. This means that every string printed from a Twig template (anything between `{{ }}`) gets *escaped*.
 
@@ -14,7 +14,7 @@ It's possible to let the varible go through a filter before printing it. This ca
 
 ### Accessing arrays
 
-It's very easy to access a variable that get's passed from php, but what about arrays? They are a very common used data type.
+It's very easy to access a variable that gets passed from php, but what about arrays? They are a very commonly used data type.
 
   *PHP*
 
@@ -25,7 +25,7 @@ It's very easy to access a variable that get's passed from php, but what about a
       ),
     );
 
-To access a value from the arary, we simple use the name of the variable, followed by a `.` and the name of the key.
+To access a value from the array, we simple use the name of the variable, followed by a `.` and the name of the key.
 
   *Twig*
 
@@ -161,7 +161,7 @@ A replacement block can be rendered if no iteration took place (because the sequ
 
 #### Create a Twig variable
 
-Sometimes it might be useful to define variables in a template file. `{% set foo="bar" %}` declaires a variable `foo` and assigns the value `bar` to it. Later in the template, the variable can be printed out using `{{ foo }}`.
+Sometimes it might be useful to define variables in a template file. `{% set foo="bar" %}` declares a variable `foo` and assigns the value `bar` to it. Later in the template, the variable can be printed out using `{{ foo }}`.
 
     example.twig.php
     ---
