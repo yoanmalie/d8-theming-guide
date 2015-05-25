@@ -1,8 +1,8 @@
 ## Twig
 
-Twig is a modern PHP-based compiled templating language. It is part of the Symfony 2 framework and the the default template engine ([Read the official change record](https://www.drupal.org/node/1831138).) in Drupal 8.
+Twig is a modern PHP-based compiled templating language. It is part of the Symfony 2 framework and is the default template engine in Drupal 8 ([Read the official change record](https://www.drupal.org/node/1831138)).
 
-All of the `theme_*` functions and PHPTemplate based `*.tpl.php` files have been completely removed and got replaced with Twig template files. These template files have a new Twig extension: `*.html.twig`.
+All of the `theme_*` functions and PHPTemplate based `*.tpl.php` files have been completely removed and replaced with Twig template files. These template files have a new Twig extension: `*.html.twig`.
 
 When your web page renders, the Twig template engine takes the template file and converts it into a 'compiled' PHP template which it stores in a protected directory in `sites/default/files/php_storage/*` The compilation is done once. Template files are cached for reuse and are recompiled on clearing the Twig cache.
 
@@ -15,7 +15,7 @@ Twig is a new core programming language and all of the core template files must 
 
 ### Advantages
 
-Compared to PHPTemplate, Twig offers some major advantages. Especially when it comes to secuirty.
+Compared to PHPTemplate, Twig offers some major advantages. Especially when it comes to security.
 
 - Twig is more secure, due to the fact that only a number of tags can be used. In the previous PHPTemplate, it was possible for a template file to execute the following code:
 
@@ -25,12 +25,12 @@ Compared to PHPTemplate, Twig offers some major advantages. Especially when it c
 
   This should of course not be the case. In case you're wondering what it does: it removes the entire `users` table from your database. Not good, right?
 
-- There now is a clear separation between the *logic* and the *view*. This means: no more PHP code inside your template files.
+- There is now a clear separation between the *logic* and the *view*. This means: no more PHP code inside your template files.
 - The syntax is very easy to understand, making the code more readable as well. Also, many IDE's have syntax highlighting for `*.twig` files.
 - Template files are reusable, thanks to [Twig includes](http://twig.sensiolabs.org/doc/tags/include.html).
 - Debugging is much more easy. First of all, Twig outputs a helpful message with the filename and the line number whenever there is a syntax problem within a template. Secondly, you can turn on a Twig debug function. More on that later.
 - Twig is very well documented. Go ahead and [start reading the official documentation here](http://twig.sensiolabs.org/documentation).
-- It's not only used in Drupal core, so it's no a Drupaly-thing.
+- It's not only used in Drupal core, so it's not a Drupaly-thing.
 
 ### Disadvantage
 
