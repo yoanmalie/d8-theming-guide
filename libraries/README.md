@@ -91,6 +91,10 @@ A jQuery plugin allowing to only apply a function once to an element.
 
 > There are plenty more libraries in core.
 
+## Global styling
+
+Stylesheets that should be included on all pages are concidered globing styling. It's concidered a good practice to use `{theme}/globing-styling` as a key for this sort of stylesheets.
+
 ## Adding a javascript library
 
 Here is an example of how to add a custom javascript file to theme.
