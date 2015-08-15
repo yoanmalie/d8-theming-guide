@@ -54,4 +54,5 @@ My dream is to have no admin CSS in modules at all. My realistic aim is to have 
 
 **Read more**
 
+* [Seven documentation on d.o](https://www.drupal.org/documentation/themes/seven)
 * [Lewis Nyman](http://lewisnyman.co.uk/)
