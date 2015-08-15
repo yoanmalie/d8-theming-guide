@@ -96,6 +96,8 @@ Regions can be defined using the `regions` tag. Here is an example where 3 regio
 	  content: 'Content'
 	  footer: 'Footer'
 
+A region that is required in all theme is the `content` region. 
+
 #### Regions hidden
 
 The `regions_hidden` can be applied to any previous defined *regions*. Regions with this attribute will not show up on the block administration page. This means they can't have blocks assigned to them by ordinary mechanisms. Drupal uses this feature to protect the special 'page_top' and 'page_bottom' regions from adventurous themers. This can be used by module writers and theme writers to protect a given region from having unexpected content inserted into the output. The `seven.info.yml` contains this tag, in order to *hide* the 'Sidebar First' region.
