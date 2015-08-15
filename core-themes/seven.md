@@ -53,3 +53,5 @@ My dream is to have no admin CSS in modules at all. My realistic aim is to have 
 ***
 
 **Read more**
+
+* [Lewis Nyman](http://lewisnyman.co.uk/)
