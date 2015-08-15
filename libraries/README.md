@@ -2,7 +2,7 @@
 
 ## The history of libraries, part 1
 
-During the early development of Drupal 8, assets such as javascript and stylesheets had their own, different way of getting imported into themes. Importing a custom javascript file was done using the `scripts` property inside the `.info.yml`-file of the theme. To import stylesheets, the `stylesheets` property was used. This was more or tell how it was done in Drupal 7. Here is an example from a Drupal 7 `theme.info` file.
+During the early development of Drupal 8, assets such as javascript and stylesheets had their own, different way of getting imported into themes. Importing a custom javascript file was done using the `scripts` property inside the `.info.yml`-file of the theme. To import stylesheets, the `stylesheets` property was used. This was more or less the way it was done in Drupal 7. Here is an example from a Drupal 7 `theme.info` file.
 
     ...
 
@@ -11,16 +11,15 @@ During the early development of Drupal 8, assets such as javascript and styleshe
     stylesheets[print][] = css/print.css
 
     # Adding javascript files
-    styles[] = js/script.js
-
+    scripts[] = js/script.js
 
     ...
 
-An alternative path was chosen. Javascript maintainer **_nod** created an issue on [using AMD for JS architecture](https://www.drupal.org/node/1542344). The patch for the issue however became so big, a separate issue was created that handled the splitting up of the dependencies. The patch from this issue - [Explicitly declare all JS dependencies, don't use drupal_add_js](https://www.drupal.org/node/1737148) - where all javascript files are declared as libraries and added the relevant dependencies to the scripts, got committed about two weeks after the creation. The original issue [**AMD architecture**] however was posponed to a later Drupal release (Drupal 9.x).
+An alternative path was chosen. Javascript maintainer **_nod** created an issue on [using AMD for JS architecture](https://www.drupal.org/node/1542344). The patch for the issue became so big that a separate issue was created. This issue handled the splitting up of the dependencies. This patch, [Explicitly declare all JS dependencies, don't use drupal_add_js](https://www.drupal.org/node/1737148), where all javascript files are declared as libraries and added the relevant dependencies to the scripts, got committed about two weeks after the creation. The original issue [**AMD architecture**] however was posponed to a later Drupal release (Drupal 9.x). 
 
 ## {}.libraries.yml
 
-Libraries are declared inside a `*.libraries.yml` file (in the early stages of Drupal 8, this was done using `hook_library_info`. Since this was one of the last remaining hooks in Drupal 8, it got [replaced by a `*.libraries.yml` file](https://www.drupal.org/node/2201089)). The file should be in the root directory of the theme (or module).
+During the early stages of Drupal 8, this was done using `hook_library_info`. Since this was one of the last remaining hooks in Drupal 8, it got [replaced by a `*.libraries.yml` file](https://www.drupal.org/node/2201089)). This means modules, themes and profiles can define their own `*.libraries.yml` file. The file should be in the root directory of the theme (or module).
 
     # example.libraries.yml
 
@@ -35,18 +34,18 @@ Libraries are declared inside a `*.libraries.yml` file (in the early stages of D
         - core/drupal
         - core/jquery
 
-Inside the `.info.yml` file the library can be included into our theme, using the `libraries` property.
+Inside the `.info.yml` file from a module or theme, the library can be included using the `libraries` property.
 
     # example.info.yml
 
     libraries:
       - example/base
 
-The *example* theme now has a global dependency on the `base` library (from the *example* theme/module); `example/base`. Therefor it's included on **every page** The `base` library itself contains a single javascript file (`scripts.js`), a css file (categoried as a component) and has dependencies on the `drupal` and `jquery` library from core.
+The *example* theme now has a global dependency on the `base` library (from the *example* theme/module); `example/base`. Therefor it's included on **every page** (where this theme is loaded). The `base` library itself contains a single javascript file (`scripts.js`), a css file (categoried as a component) and has dependencies on the `drupal` and `jquery` library from core (read more on this in the **Javascript** chapter).
 
 ## The history of libraries, part 2
 
-Coming from this change, the `scripts` tag from the `.info.yml`, had to be removed and replaced with the `libraries` property. This ment scripts were include using the `libraries` property and a `libraries.yml` file. Stylesheets however (in themes) were still included using the `stylesheets` property:
+Due to this change, the `scripts` tag from the `.info.yml`, was removed and replaced with the `libraries` property. This means scripts can only be included using the `libraries` property and a `libraries.yml` file. Stylesheets however (in themes) could still included using the old `stylesheets` property:
 
 **_nod**:
 
@@ -54,7 +53,7 @@ Coming from this change, the `scripts` tag from the `.info.yml`, had to be remov
 
 > stylesheets[] can be kept as is, it's totally fair to add a single css file without dependencies. It's highly unlikely for scripts, they will need to depend on jquery, drupal.js 99% of the time.
 
-It became clear this new way of adding assets had some major advantages. Wim Leers created a new issue stating [Themes should use libraries, not individual stylesheets](https://www.drupal.org/node/2377397). This is where the `stylesheets` property from the `.info` file got removed to have a unified way for adding assets libraries.
+It became clear this new way of adding assets had some major advantages. Wim Leers created a new issue stating [Themes should use libraries, not individual stylesheets](https://www.drupal.org/node/2377397). Due to the advantages pointed out in this issue, the `stylesheets` property from the `.info` file got removed. Thanks to this, there is now a unified way for adding assets libraries.
 
 ## The advantages of libraries and dependencies
 
@@ -68,13 +67,11 @@ Copied from the issue summary of [2377397](https://www.drupal.org/node/2377397):
 
 ## Attach libraries directly from a template file
 
-As mentioned, the libraries inside the `*.info.yml` file are include globally, on every page. To conditionally add a library, you had to use a `preprocess` function (`#attached`); just like in Drupal 7. In order to improve the theming experience, a simple Twig function has been added to easify this. ``{{ attach_library('theme/library') }}`` makes it possible to add libraries directy from template files.
+As mentioned, the libraries inside the `*.info.yml` file are include globally, on every page. To conditionally add a library, a `preprocess` function (`#attached`), just like in Drupal 7, had to be used. In order to improve the front-end developer experience, a simple Twig function has been added to easify this. ``{{ attach_library('theme/library') }}`` makes it possible to add libraries directy from template files. A huge win.
 
 > The only template files that doesn't support this is **html.html.twig**. More information can be found [here](https://www.drupal.org/node/2398331#comment-9745117).
 
 ## Core libraries
-
-Drupal 8 doesn't load any additional scripts by default. This also means that a library like [jQuery is not included](https://www.drupal.org/node/1541860) on every page any more. This is mostly due to performance reasons. You have to declare jQuery (or any other core library) as a dependency in order to use it.
 
 A quick overview of the of some of the core libraries.
 
@@ -86,7 +83,7 @@ We need `core/drupal` in order to take advantage of the `Drupal.behaviors`.
 
 - `core/jquery`
 
-To include the Drupal core version of jQuery, we add `core/jquery`.
+To include the Drupal core version of jQuery, we add `core/jquery`. 
 
 - `core/jquery.once`
 
@@ -98,7 +95,7 @@ A jQuery plugin allowing to only apply a function once to an element.
 
 Here is an example of how to add a custom javascript file to theme.
 
-First, create a `*.libraries.yml` file, e.g. `awesome.libraries.yml` (`{theme-or-module-name}`.libraries.yml) and save it into the root of our theme.
+Start by creating a `*.libraries.yml` file, e.g. `awesome.libraries.yml` (`{theme-or-module-name}`.libraries.yml) and save it into the root of the theme.
 
     base:
       version: 1.x
@@ -109,11 +106,11 @@ First, create a `*.libraries.yml` file, e.g. `awesome.libraries.yml` (`{theme-or
         - core/jquery
         - core/jquery.once
 
-> We need `core/drupal` in order to take advantage of the `Drupal.behaviors`. To include the Drupal core version of jQuery, we add `core/jquery`. The final dependency is `core/jquery.once`, a jQuery plugin allowing to only apply a function once to an element.
+> We need `core/drupal` in order to take advantage of the `Drupal.behaviors`. To include the Drupal core version of jQuery, we add `core/jquery`. The final dependency is `core/jquery.once`, a jQuery plugin allowing to only apply a function once to an element. 
 
-In the `*.info.yml` file of the theme (or module), add the following lines, to include the new declared *library* into the theme (or module).
+Open up the `*.info.yml` file of the theme and add the following lines to include the *library* into the theme.
 
     libraries:
       - awesome/base
 
-This includes the custom javascript (and makes sure the dependencies are loaded). In this example, Drupal will make sure that jQuery is loaded before importing `awesome.js`.
+This includes the custom javascript and also makes sure that all dependencies are loaded. For example: Drupal will make sure that jQuery is loaded before importing `awesome.js`.
