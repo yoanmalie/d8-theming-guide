@@ -10,7 +10,7 @@
 
 To print a simple variable in a template, use `{{ variable }}`.
 
-It's possible to let the varible go through a filter before printing it. This can be done using `{{ varible|filter }}`.
+It's possible to let the variable go through a filter before printing it. This can be done using `{{ variable|filter }}`.
 
 ### Accessing arrays
 
