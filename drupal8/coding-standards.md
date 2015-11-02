@@ -12,7 +12,7 @@ The CSS coding standards are based upon two very popular methodologies called SM
 
 ### SMACSS
 
-SMACSS (pronounced “smacks”) stands for **Scalable and Modular Architecture for CSS**. Drupal 8 uses **SMACSS** to conceptually categorize CSS rules inside libarries.
+SMACSS (pronounced “smacks”) stands for **Scalable and Modular Architecture for CSS**. Drupal 8 uses **SMACSS** to conceptually categorize CSS rules inside libraries.
 
 #### Base
 
