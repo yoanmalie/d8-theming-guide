@@ -34,13 +34,9 @@ The official **SMACSS** terminology for this is *modules*. Since *modules* have 
 
 #### Theme
 
-Sometimes also called **skin**, again to avoid the confusion with the Drupal term *themes*.
+Sometimes also referred to as  **skin**, again to avoid the confusion with the Drupal term *themes*.
 
 > A **theme** defines colors and/or images to give a certain look and feel to any of the previous element.
-
-<div style="float: left; margin-right: 10px;">
-![](../img/icons/pensil.png)
-</div>
 
     // component.css
     .component {
@@ -61,10 +57,10 @@ More information about SMACSS can be found on the [SMACSS](https://smacss.com/) 
 
 The Seven theme uses these categories to split up the css rules. The Seven theme contains a directory called `css`. Inside this folder, four more directories live:
 
-- `core/themes/seven/base`
-- `core/themes/seven/components`
-- `core/themes/seven/layout`
-- `core/themes/seven/theme`
+- `core/themes/seven/css/base`
+- `core/themes/seven/css/components`
+- `core/themes/seven/css/layout`
+- `core/themes/seven/css/theme`
 
 These folder contain the stylesheet (`.css` files) for each corresponding category.
 
@@ -81,8 +77,6 @@ BEM (Block Element Modifier) is a naming convention. The Drupal 8 CSS class name
 - **Modifiers** are flags set on blocks or elements; they define properties or states. They may be boolean (for example, visible: true or false) or key-value pairs (size: large, medium, small) — somewhat similar to HTML attributes, but not exactly the same. Multiple modifiers are allowed on a single item if they represent different properties.
 
 **Source:** [Smashing Magazine](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
-
-![](../img/icons/pensil.png)
 
 `buttons.theme.css (Seven)`:
 
