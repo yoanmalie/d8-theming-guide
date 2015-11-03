@@ -81,7 +81,7 @@ To safely escape all of the Twig variables detected in a `{% trans %}` tag, the 
 
 ##### Replace twig's escape filter with our own.
 
-- `drupal_escape` is a replacement function for Twig's escape filter. See [twig_drupal_escape_filter](https://api.drupal.org/api/drupal/core%21themes%21engines%21twig%21twig.engine/function/twig_drupal_escape_filter/8)
+- `drupal_escape` is a replacement function for Twig's escape filter. See [twig_drupal_escape_filter](https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Template!TwigExtension.php/function/TwigExtension%3A%3AescapeFilter/8)
 
 ##### Implements safe joining.
 
