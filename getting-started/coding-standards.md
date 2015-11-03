@@ -8,7 +8,7 @@ There are coding standards for **css**, **javascript** and the new **Twig** temp
 
 ## CSS
 
-The CSS coding standards are based upon two very popular methodologies called SMACSS and BEM. They are also based on the **DRY** principle: **Don't Repeat Yourself**.
+The CSS coding standards are based upon two very popular methodologies called **SMACSS** and **BEM**. 
 
 ### SMACSS
 
@@ -62,10 +62,6 @@ The Seven theme uses these categories to split up the css rules. The Seven theme
 - `core/themes/seven/css/layout`
 - `core/themes/seven/css/theme`
 
-These folder contain the stylesheet (`.css` files) for each corresponding category.
-
-[Read more](https://www.drupal.org/node/2321505) about splitting up `style.css` into SMACSS categories.
-
 ### BEM
 
 BEM (Block Element Modifier) is a naming convention. The Drupal 8 CSS class names are based on the BEM methodology, resulting in more transparency and meaning.
@@ -91,6 +87,8 @@ BEM (Block Element Modifier) is a naming convention. The Drupal 8 CSS class name
 
 **Read more**
 
+* [SMACSS Homepage](https://smacss.com)
+* [Split Seven's style.css into SMACSS categories](https://www.drupal.org/node/2321505), the issue to get the **Seven** theme inline with these new coding standards.
 * [Organize Your Styles - An Introduction to SMACSS](https://www.acquia.com/blog/organize-your-styles-introduction-smacss), a blog post by Acquia.
 * [BEM and SMACSS: Advice From Developers Who’ve Been There](http://www.sitepoint.com/bem-smacss-advice-from-developers/), a blog post by New Relic.
 * [BEM methodology for small projects](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)

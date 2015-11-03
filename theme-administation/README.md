@@ -29,3 +29,10 @@ Drupal scans the `themes` directory and looks `*.info.yml` to find new themes. M
     /sites/{site}/themes
 
 > For themes that should be available on a specific site (on a multisite installation).
+
+****
+
+@todo: Change location of this part:
+
+- [The default settings and config are changed to be fast and safe production values.](https://www.drupal.org/node/2259531)
+In a default Drupal 8 installation, CSS and JS aggregation is turned on.
