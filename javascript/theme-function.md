@@ -39,10 +39,8 @@ Javascript theme functions are now using `Drupal.theme` directly.
     };
 
     var example = Drupal.theme('example'); // Hello world!
-    var another_example = Drupal.theme('anotherExample', 'Mr.', 'Dries'); // Hello Mr. Dries!
-
-***
-
+    var another_example = Drupal.theme('anotherExample', 'Mr.', 'Dries');
+    
 #### Declaring several theme functions
 
 Declaring several theme functions can be done using the
