@@ -1,8 +1,8 @@
 ## Bartik
 
-`base theme: classy`
+*Bartik* was introduced in Drupal 7 as a new, clean and simple theme. The theme has some new cool features in Drupal 8 and is also completely responsive. Bartik is the default user-facing theme in Drupal 8.
 
-*Bartik* was introduced in Drupal 7 as a new, clean and simple theme. The theme has some new cool features in Drupal 8 and is also completely responsive.
+`base theme: classy`
 
 ### Moving Bartik forward
 

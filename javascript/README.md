@@ -1,8 +1,8 @@
-## Javascript
+# Javascript
 
 [Introduction]
 
-### File-closure
+## File-closure
 
 As part of the Drupal 8 Javascript Coding Standards, all of the javascript code **must** be declared inside a closure wrapping the whole file. This closure **must** be in strict mode.
 
@@ -11,7 +11,7 @@ As part of the Drupal 8 Javascript Coding Standards, all of the javascript code 
       // Custom javascript
     })();
 
-### 'use strict'
+## 'use strict'
 
 The `"use strict"` directive is new in JavaScript 1.8.5 and ignored by previous
 versions of javascript. The purpose of `"use strict"` is to indicate that the
@@ -35,7 +35,7 @@ error.
 > changed. Since it's not declared, it will be created as new global variable.
 > In *strict mode* hover, the example above will cause an error.
 
-### ESHint
+## ESHint
 
 > As of Drupal 8, we use ESLint to make sure our JavaScript code is consistent and free from syntax error and leaking variables and that it can be properly minified.
 

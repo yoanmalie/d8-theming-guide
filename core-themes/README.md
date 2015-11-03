@@ -1,6 +1,6 @@
 # Drupal core themes
 
-The four Drupal 8 **core** themes live inside the `core/themes` folder. As part of the Drupal 8 Mobile Initiative all of Drupal core's themes have been converted to a  responsive design.
+The four Drupal 8 **core** themes live inside the `core/themes` folder. As part of the Drupal 8 Mobile Initiative all of Drupal core's themes have been converted to a  responsive design. All of the core theme (not base themes) must function when used as an administration theme. Since Drupal 8 is multilingual, the core themes must also support bidirectional text.
 
 > **NOTE:** Stark had a stylesheet inside the theme to make sure the regions were responsive. However, this stylesheet got removed. **Read more on this in the Stark section.**
 
