@@ -1,6 +1,6 @@
 ## Core libraries
 
-A quick overview of the of some of the core libraries.
+A quick overview from some of the core libraries.
 
 > To get a **complete overview** of all the core libraries, take a look inside `core/core.libraries.yml`.
 
