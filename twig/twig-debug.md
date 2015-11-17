@@ -1,6 +1,6 @@
 ## Twig debug
 
-A new feature in Drupal core is the theùe debug tool. It allows developers to trace from which template files certain markup comes. To enable Twig Debugging, all you have to do is set the `debug` variable in the `twig.config ` to `true`.
+A new feature in Drupal core is the **Twig debug** tool. It allows developers to trace from which template files certain markup comes. To enable Twig Debugging, all you have to do is set the `debug` variable in the `twig.config ` to `true`.
 
 ![](../img/twig-debug-services.png)
 

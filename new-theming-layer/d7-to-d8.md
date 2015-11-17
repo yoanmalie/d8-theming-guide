@@ -24,3 +24,7 @@ Since the process layer got removed, the only layer between the data and the tem
 The preprocess layer still exists, but it's used for a different purpose. In Drupal 8, the preprocess layer should not be used to add css classes. This should be done in the template files.
 
 - [CSS classes being moved from preprocess to Twig templates](https://www.drupal.org/node/2325067).
+
+### Render arrays
+
+In Drupal 8, everything is a render array. This allows for late rendering, and allows data alterations to happen right before the template is being rendered.

@@ -8,7 +8,7 @@ There are coding standards for **css**, **javascript** and the new **Twig** temp
 
 ## CSS
 
-The CSS coding standards are based upon two very popular methodologies called **SMACSS** and **BEM**. 
+The CSS coding standards are based upon two very popular methodologies called **SMACSS** and **BEM**.
 
 ### SMACSS
 
@@ -21,6 +21,15 @@ SMACSS (pronounced “smacks”) stands for **Scalable and Modular Architecture 
 #### Layout
 
 > **Layout** rules define the composition of common primary modules that typically appear on every page. CSS from **Grid systems** is also categorized here.
+
+In Drupal core themes, all of the layout styling (the global layout of the page), is done by using a `.layout-` prefix classes. Below are some examples:
+
+        .layout-content
+        .layout-container
+        .layout-sidebar-left
+        .layout-sidebar-right
+
+**Note**: Those `.layout-` classes should never contain colors, borders, … only widths, floats, margins, paddings to accomplish the global grid of the page.  
 
 #### Component
 
