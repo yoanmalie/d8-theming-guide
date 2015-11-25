@@ -1,4 +1,4 @@
-we ## Coding standards
+## Coding standards
 
 There are coding standards for **css**, **javascript** and the new **Twig** template engine:
 
@@ -22,18 +22,18 @@ SMACSS (pronounced “smacks”) stands for **Scalable and Modular Architecture 
 
 > **Layout** rules define the composition of common primary modules that typically appear on every page. CSS from **Grid systems** is also categorized here.
 
-In Drupal core themes, all of the layout styling (the global layout of the page), is done by using a `.layout-` prefix classes. Below are some examples:
+In Drupal core themes all of the layout styling classes (the global layout of the page) are prefixed using `.layout-` classes. Below are some examples:
 
         .layout-content
         .layout-container
         .layout-sidebar-left
         .layout-sidebar-right
 
-**Note**: Those `.layout-` classes should never contain colors, borders, … only widths, floats, margins, paddings to accomplish the global grid of the page.  
+**Note**: Those `.layout-` classes should never contain colors, borders, … only widths, floats, margins, paddings to accomplish the global grid of the page.
 
 #### Component
 
-The official **SMACSS** terminology for this is *modules*. Since *modules* have a different meaning in Drupal, this category was renamed to *component* to avoid confusion.
+The official **SMACSS** terminology for this is **modules**. Since *modules* have a different meaning in Drupal, this category was renamed to **component** to avoid confusion.
 
 > **Components** are discrete and reusable elements of the UI. Component rules should be reusable and flexible. Examples of components are carousels, dialogs, widgets, …
 
@@ -41,22 +41,27 @@ The official **SMACSS** terminology for this is *modules*. Since *modules* have 
 
 > A **state** is something that augments and overrides all other styles. Typically they describe a certain action or trigger. The best example is the `is-active` state, used to mark an item as *active*. These classes typically start with the `is-` prefix.
 
+In Drupal core the states are typically defined together with the component.
+
 #### Theme
 
-Sometimes also referred to as  **skin**, again to avoid the confusion with the Drupal term *themes*.
+Sometimes also referred to as  **skin** to avoid the confusion with the Drupal term *themes*.
 
 > A **theme** defines colors and/or images to give a certain look and feel to any of the previous element.
 
+An example below:
+
     // component.css
+
     .component {
         border: 1px solid;
     }
 
     // theme.css
+
     .component {
         border-color: blue;
     }
-
 
 More information about SMACSS can be found on the [SMACSS](https://smacss.com/) website.
 
@@ -73,7 +78,7 @@ The Seven theme uses these categories to split up the css rules. The Seven theme
 
 ### BEM
 
-BEM (Block Element Modifier) is a naming convention. The Drupal 8 CSS class names are based on the BEM methodology, resulting in more transparency and meaning.
+BEM (Block Element Modifier) is a naming convention. The Drupal 8 CSS class names are based on the **BEM methodology**, resulting in more transparency and meaning.
 
 `.block__element--modifier`
 

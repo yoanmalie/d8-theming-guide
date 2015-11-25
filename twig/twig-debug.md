@@ -38,7 +38,10 @@ The files with **(\*)** are theme hook suggestions, and can be used to override 
 
 To print all the available variables (in a template file), the `dump()`-function can be used. To print the content of a specific variable you have to pass the name of the variable as a parameter to the function.
 
-> **Note:** When using the `dump()`, you might stumble upon a white screen of death. The command is recursively traversing and printing all the variables, which consumes too much memory. Instead, try using `{{ dump(_context|keys) }}`, which will only print all the available keys.
+> **Note:** When using the `dump()`, you might stumble upon a white screen of death. The command is recursively traversing and printing all the variables, which consumes too much memory.
+
+        # Only print the available keys
+        {{ dump(\_context|keys) }}
 
 Print *all* available variables:
 

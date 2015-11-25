@@ -8,11 +8,13 @@ Below is an example of a Drupal Javascript Behavior.
 
     (function ($) {
       'use strict';
+
       Drupal.behaviors.awesome = {
         attach: function(context, settings) {
           $('main', context).once('awesome').append('<p>Hello world</p>');
         }
       };
+
     }(jQuery));
 
 Let's have a quick look at what this does.

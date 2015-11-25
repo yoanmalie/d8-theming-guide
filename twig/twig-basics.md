@@ -4,11 +4,11 @@
 
 > To escape a string means to reduce ambiguous characters in a string.
 
-[Twig autoescape enabled](https://www.drupal.org/node/2296163) by default. This means that every string printed from a Twig template (anything between `{{ }}`) gets *escaped*.
+[Twig autoescape is enabled](https://www.drupal.org/node/2296163) by default. This means that every string printed from a Twig template (anything between `{{ }}`) gets *escaped*.
 
 ### Printing a variable
 
-To print a simple variable in a template, use `{{ variable }}`, eg. `{{ foo }}`
+To print a variable in a template, use `{{ variable }}`, eg. `{{ foo }}`
 
 A dot (`.`) can be used to access attributes of a variable:
 
@@ -27,8 +27,8 @@ A dot (`.`) can be used to access attributes of a variable:
     // Object is method convention.
     $foo->isBar();
     // Object dynamic object property is set and get property.
-    $foo->__isset('bar');
-    $foo->__get('bar');
+    `$foo->__isset('bar');`
+    `$foo->__get('bar');`
 
 *PHP*
 
@@ -100,11 +100,11 @@ To safely escape all of the Twig variables detected in a `{% trans %}` tag, the 
 
 The Twig i18n extension allows marking parts of a template as translatable. Let's start of with an easy example:
 
-  `{%trans %} Hello world {% endtrans %}`
+  `{% trans %} Hello world {% endtrans %}`
 
 It's possible to embed a variable in a translatable string, using the `{{ variable }}` syntax.
 
-  `{%trans %} Hello {{ name }} {% endtrans %}`
+  `{% trans %} Hello {{ name }} {% endtrans %}`
 
 To apply a filter to a variable, used in a translatable block you first need to assign the result to a variable.
 
@@ -112,7 +112,7 @@ To apply a filter to a variable, used in a translatable block you first need to 
 
     {% trans %}
       Hello {{ name }}!
-      {% endtrans %}
+    {% endtrans %}
 
 A translatable string can be pluralized. Implementing a `{% plural ... %}` switch makes this possible.
 
