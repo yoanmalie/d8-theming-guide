@@ -2,7 +2,7 @@
 
 `Drupal.theme` is the client-side counterpart of the server-side `theme()`-function. All of the server-side `theme()` function has been removed in Drupal 8. The client-side function however remains part of the Javascript API. All markup (defined in Javascript) should go through these theme functions.
 
-The beautify of this system is that it allows the reuse of theme functions as templates and the override of these functions in themes. A module can define a theme functions; a theme thats wants to change the markup can override the function to define it's own template.
+The beauty of this system is that it allows the reuse of theme functions as templates and the override of these functions in themes. A module can define a theme function; a theme that wants to change the markup can override the function to define its own template.
 
 The `Drupal.theme` function [has been simplified](https://www.drupal.org/node/1816980).
 Previously it was possible to declare functions in `Drupal.theme.prototype`,
@@ -40,7 +40,7 @@ Javascript theme functions are now using `Drupal.theme` directly.
 
     var example = Drupal.theme('example'); // Hello world!
     var another_example = Drupal.theme('anotherExample', 'Mr.', 'Dries');
-    
+
 #### Declaring several theme functions
 
 Declaring several theme functions can be done using the

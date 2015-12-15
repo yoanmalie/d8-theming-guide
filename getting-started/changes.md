@@ -18,7 +18,7 @@ The markup of Drupal 8 is written using [HTML5](http://buytaert.net/html5-in-dru
 Drupal is now out-of-the-box responsive and mobile ready.
 
 **Read more**:
-- [Drupal is now of the box responsive and mobile ready.](https://groups.drupal.org/mobile/drupal-8)
+- [Drupal is now out-of-the-box responsive and mobile ready.](https://groups.drupal.org/mobile/drupal-8)
 
 ## Browser support
 
