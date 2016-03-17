@@ -1,0 +1,1001 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Creating an info file | The Drupal 8 Theming Guide</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.3">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../breakpoint-images/index.html" />
+    
+    
+    <link rel="prev" href="../custom-theme/theme-directory.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="10.2" data-basepath=".." data-revision="Thu Mar 17 2016 19:31:08 GMT+0100 (CET)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="introduction/index.html">
+            
+                
+                    <a href="../introduction/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Foreword
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="introduction/about-me.html">
+            
+                
+                    <a href="../introduction/about-me.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        About me
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction/licence.html">
+            
+                
+                    <a href="../introduction/licence.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Licence
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="getting-started/index.html">
+            
+                
+                    <a href="../getting-started/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Getting started
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="getting-started/changes.html">
+            
+                
+                    <a href="../getting-started/changes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Changes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="getting-started/coding-standards.html">
+            
+                
+                    <a href="../getting-started/coding-standards.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Coding standards
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="core-themes/index.html">
+            
+                
+                    <a href="../core-themes/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Core themes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="core-themes/bartik.html">
+            
+                
+                    <a href="../core-themes/bartik.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Bartik
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="core-themes/seven.html">
+            
+                
+                    <a href="../core-themes/seven.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Seven
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="core-themes/stark.html">
+            
+                
+                    <a href="../core-themes/stark.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Stark
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="core-themes/classy.html">
+            
+                
+                    <a href="../core-themes/classy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Classy
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="core-themes/stable.html">
+            
+                
+                    <a href="../core-themes/stable.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Stable
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="theme-administation/index.html">
+            
+                
+                    <a href="../theme-administation/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Theme administration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="new-theming-layer/index.html">
+            
+                
+                    <a href="../new-theming-layer/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        The Drupal 8 theme layer
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="new-theming-layer/theme-engines.html">
+            
+                
+                    <a href="../new-theming-layer/theme-engines.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Theme engines
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="new-theming-layer/the-old-theme-layer.html">
+            
+                
+                    <a href="../new-theming-layer/the-old-theme-layer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        The old theme layer
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="new-theming-layer/phptemplate.html">
+            
+                
+                    <a href="../new-theming-layer/phptemplate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        PHPTemplate
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="new-theming-layer/twig.html">
+            
+                
+                    <a href="../new-theming-layer/twig.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Twig
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="new-theming-layer/d7-to-d8.html">
+            
+                
+                    <a href="../new-theming-layer/d7-to-d8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        From Drupal 7 to Drupal 8
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="theme-hooks-and-theme-hook-suggestions/index.html">
+            
+                
+                    <a href="../theme-hooks-and-theme-hook-suggestions/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Theme Hooks and Theme Hook Suggestions
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="theme-hooks-and-theme-hook-suggestions/hook-theme.html">
+            
+                
+                    <a href="../theme-hooks-and-theme-hook-suggestions/hook-theme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        hook_theme
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="theme-hooks-and-theme-hook-suggestions/theme-hook-suggestions.html">
+            
+                
+                    <a href="../theme-hooks-and-theme-hook-suggestions/theme-hook-suggestions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Theme Hook Suggestions
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="twig/index.html">
+            
+                
+                    <a href="../twig/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Twig
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="twig/twig-basics.html">
+            
+                
+                    <a href="../twig/twig-basics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        Twig basics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="twig/twig-debug.html">
+            
+                
+                    <a href="../twig/twig-debug.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Twig debug
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="twig/template-files.html">
+            
+                
+                    <a href="../twig/template-files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Template files
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="twig/template-folder.html">
+            
+                
+                    <a href="../twig/template-folder.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        /template folder
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="libraries/index.html">
+            
+                
+                    <a href="../libraries/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Libraries
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="libraries/history.html">
+            
+                
+                    <a href="../libraries/history.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        History of libraries
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="libraries/advantages.html">
+            
+                
+                    <a href="../libraries/advantages.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Advantage
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="libraries/libraries-and-twig.html">
+            
+                
+                    <a href="../libraries/libraries-and-twig.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Attach a library in Twig
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="libraries/core-libraries.html">
+            
+                
+                    <a href="../libraries/core-libraries.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        Core libraries
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="javascript/index.html">
+            
+                
+                    <a href="../javascript/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Javascript
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="javascript/file-closure.html">
+            
+                
+                    <a href="../javascript/file-closure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        File Closure
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="javascript/eshint.html">
+            
+            <span><b>9.2.</b> ESHint</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="javascript/jquery.html">
+            
+                
+                    <a href="../javascript/jquery.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        jQuery
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="javascript/multilingual.html">
+            
+                
+                    <a href="../javascript/multilingual.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        Multilingual in Javascript
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="javascript/theme-function.html">
+            
+                
+                    <a href="../javascript/theme-function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        Theme function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="javascript/behaviors.html">
+            
+                
+                    <a href="../javascript/behaviors.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.6.</b>
+                        
+                        Drupal Behaviors
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="custom-theme/index.html">
+            
+                
+                    <a href="../custom-theme/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Custom theme
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="custom-theme/theme-directory.html">
+            
+                
+                    <a href="../custom-theme/theme-directory.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        The /themes directory
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="10.2" data-path="custom-theme/info-file.html">
+            
+                
+                    <a href="../custom-theme/info-file.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        Creating an info file
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="breakpoint-images/index.html">
+            
+                
+                    <a href="../breakpoint-images/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Breakpoints
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="breakpoint-images/breakpoints.html">
+            
+                
+                    <a href="../breakpoint-images/breakpoints.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        Breakpoints
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="breakpoint-images/responsive-images.html">
+            
+                
+                    <a href="../breakpoint-images/responsive-images.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        Responsive Images
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >The Drupal 8 Theming Guide</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="creating-an-info-file">Creating an info file</h2>
+<h3 id="a-simple-info-yml-file">A simple .info.yml file</h3>
+<p>In Drupal 8, the <code>.info</code> files from themes, modules and profiles are replaced by <code>.info.yml</code> files (<a href="https://www.drupal.org/node/1935708" target="_blank">read the change record</a>). These files are parsed using the Symphony YAML Component.</p>
+<pre><code>name: Awesome Theme
+</code></pre><p>Fairly simple. This is the name of the theme. It&apos;s the name that also appears on the <em>Appearance</em> page, where you can activate your theme.</p>
+<pre><code>description: &apos;An awesome D8 theme.&apos;
+</code></pre><p>A theme description. This description is also displayed on the <em>Appearance</em> page.</p>
+<pre><code>package: Custom
+</code></pre><p>The package in which your theme lives. For the core themes, this package is of course <code>core</code>.</p>
+<pre><code>type: theme
+</code></pre><p>Since the <code>info.yml</code> files are used for besides themes also used for modules and profiles, this line lets Drupal know if it&apos;s a theme, module or a profile.</p>
+<pre><code>version: 1.0
+</code></pre><p>The version of the theme.</p>
+<pre><code>core: 8.x
+</code></pre><p>The version of Drupal core the theme requires.</p>
+<h4 id="using-a-base-theme">Using a base theme</h4>
+<pre><code>base theme: classy
+</code></pre><p>The line above gives you the power to extend from a base theme. This line can be found in both <code>bartik.info.yml</code> and  <code>seven.info.yml</code>, since these two core themes extend <strong>Classy</strong>.</p>
+<h4 id="-info-yml">*.info.yml</h4>
+<p>To wrap things up, this is our <code>.info.yml</code> file so far:</p>
+<pre><code>name: Awesome Theme
+description: &apos;An awesome D8 theme.&apos;
+base theme: classy
+package: Custom
+type: theme
+version: 1.0
+core: 8.x
+</code></pre><p>Save this as <code>{theme_name}.info.yml</code> (<code>awesome.info.yml</code>) inside the created custom theme directory (eg. <code>themes/custom/example/example.info.yml</code>). Now navigate to <code>admin/appearance</code> and see your theme displayed. You can now even enable the theme. Hooray!</p>
+<h4 id="adding-a-screenshot">Adding a screenshot</h4>
+<p>When navigation to the appearance page, you might notice a <em>no screenshot</em> image for our theme. This is because no screenshot has been found (duh!). A screenshot is automatically detected and displayed if the filename is <code>screenshot.png</code>. If we add this file, we would see the screenshot on the appearance page.</p>
+<p>Otherwise you can manually add a screenshot with the following line:</p>
+<pre><code>screenshot: otherfilename.png
+</code></pre><p>If everything went well, you should be able to see the screenshot:</p>
+<p><img src="https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/awesome_theme_screenshot.png" alt="https://raw.githubusercontent.com/sqndr/d8-theming-guide/master/img/awesome_theme_screenshot.png"></p>
+<p>The screenshot of cause doesn&apos;t have to be a <code>*.png</code>. It can be an <code>*.svg</code> or even an animated <code>*.gif</code></p>
+<p><strong>Conclusion:</strong> the filename for a screenshot does not have to be <code>screenshot.png</code>, as long as it is defined in the <em>{theme}.info.yml</em> file.</p>
+<h4 id="adding-stylesheets">Adding stylesheets</h4>
+<p>In Drupal 8, both stylesheets and scripts should be added using libraries. Read more on how to create a library with css and javascript files in the <strong>libraries</strong> chapter.</p>
+<h4 id="removing-stylesheets">Removing stylesheets</h4>
+<p>Alternatively, a stylesheet can also be removed.</p>
+<pre><code># Remove a CSS file:&#x200B;
+stylesheets-remove:
+  - core/assets/vendor/jquery.ui/themes/base/dialog.css
+</code></pre><p>To remove a stylesheet, the full path to the css file should be used (instead of just a file name). This due to the fact that multiple css files can have the same name.</p>
+<p>In cases where a Drupal core asset is being removed the full file path is needed. In cases where the file is part of a library that belongs to a module or theme, a token can be used.</p>
+<blockquote>
+<p>When using a token, it needs to be quoted because <code>@</code> is a reserved indicator in YAML.</p>
+</blockquote>
+<pre><code># Removing a stylesheet from Bartik using the @ token.
+stylesheets-remove:
+  - &apos;@bartik/css/style.css&apos;
+</code></pre><h4 id="regions">Regions</h4>
+<p>Regions can be defined using the <code>regions</code> tag. Here is an example where 3 regions are defined: a <em>header</em>, a <em>content</em> and a <em>footer</em> region:</p>
+<pre><code># Regions
+regions:
+  header: &apos;Header&apos;
+  content: &apos;Content&apos;
+  footer: &apos;Footer&apos;
+</code></pre><p>A region that is required in all theme is the <code>content</code> region. </p>
+<h4 id="regions-hidden">Regions hidden</h4>
+<p>The <code>regions_hidden</code> can be applied to any previous defined <em>regions</em>. Regions with this attribute will not show up on the block administration page. This means they can&apos;t have blocks assigned to them by ordinary mechanisms. Drupal uses this feature to protect the special &apos;page_top&apos; and &apos;page_bottom&apos; regions from adventurous themers. This can be used by module writers and theme writers to protect a given region from having unexpected content inserted into the output. The <code>seven.info.yml</code> contains this tag, in order to <em>hide</em> the &apos;Sidebar First&apos; region.</p>
+<pre><code>regions_hidden:
+  - sidebar_first
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../custom-theme/theme-directory.html" class="navigation navigation-prev " aria-label="Previous page: The /themes directory"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../breakpoint-images/index.html" class="navigation navigation-next " aria-label="Next page: Breakpoints"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -1,0 +1,1128 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Twig basics | The Drupal 8 Theming Guide</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.3">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../twig/twig-debug.html" />
+    
+    
+    <link rel="prev" href="../twig/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="7.1" data-basepath=".." data-revision="Thu Mar 17 2016 19:31:08 GMT+0100 (CET)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="introduction/index.html">
+            
+                
+                    <a href="../introduction/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Foreword
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="introduction/about-me.html">
+            
+                
+                    <a href="../introduction/about-me.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        About me
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction/licence.html">
+            
+                
+                    <a href="../introduction/licence.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Licence
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="getting-started/index.html">
+            
+                
+                    <a href="../getting-started/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Getting started
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="getting-started/changes.html">
+            
+                
+                    <a href="../getting-started/changes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Changes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="getting-started/coding-standards.html">
+            
+                
+                    <a href="../getting-started/coding-standards.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Coding standards
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="core-themes/index.html">
+            
+                
+                    <a href="../core-themes/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Core themes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="core-themes/bartik.html">
+            
+                
+                    <a href="../core-themes/bartik.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Bartik
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="core-themes/seven.html">
+            
+                
+                    <a href="../core-themes/seven.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Seven
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="core-themes/stark.html">
+            
+                
+                    <a href="../core-themes/stark.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Stark
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="core-themes/classy.html">
+            
+                
+                    <a href="../core-themes/classy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Classy
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="core-themes/stable.html">
+            
+                
+                    <a href="../core-themes/stable.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Stable
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="theme-administation/index.html">
+            
+                
+                    <a href="../theme-administation/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Theme administration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="new-theming-layer/index.html">
+            
+                
+                    <a href="../new-theming-layer/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        The Drupal 8 theme layer
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="new-theming-layer/theme-engines.html">
+            
+                
+                    <a href="../new-theming-layer/theme-engines.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Theme engines
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="new-theming-layer/the-old-theme-layer.html">
+            
+                
+                    <a href="../new-theming-layer/the-old-theme-layer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        The old theme layer
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="new-theming-layer/phptemplate.html">
+            
+                
+                    <a href="../new-theming-layer/phptemplate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        PHPTemplate
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="new-theming-layer/twig.html">
+            
+                
+                    <a href="../new-theming-layer/twig.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Twig
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="new-theming-layer/d7-to-d8.html">
+            
+                
+                    <a href="../new-theming-layer/d7-to-d8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        From Drupal 7 to Drupal 8
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="theme-hooks-and-theme-hook-suggestions/index.html">
+            
+                
+                    <a href="../theme-hooks-and-theme-hook-suggestions/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Theme Hooks and Theme Hook Suggestions
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="theme-hooks-and-theme-hook-suggestions/hook-theme.html">
+            
+                
+                    <a href="../theme-hooks-and-theme-hook-suggestions/hook-theme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        hook_theme
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="theme-hooks-and-theme-hook-suggestions/theme-hook-suggestions.html">
+            
+                
+                    <a href="../theme-hooks-and-theme-hook-suggestions/theme-hook-suggestions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Theme Hook Suggestions
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="twig/index.html">
+            
+                
+                    <a href="../twig/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Twig
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="7.1" data-path="twig/twig-basics.html">
+            
+                
+                    <a href="../twig/twig-basics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        Twig basics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="twig/twig-debug.html">
+            
+                
+                    <a href="../twig/twig-debug.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Twig debug
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="twig/template-files.html">
+            
+                
+                    <a href="../twig/template-files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Template files
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="twig/template-folder.html">
+            
+                
+                    <a href="../twig/template-folder.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        /template folder
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="libraries/index.html">
+            
+                
+                    <a href="../libraries/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Libraries
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="libraries/history.html">
+            
+                
+                    <a href="../libraries/history.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        History of libraries
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="libraries/advantages.html">
+            
+                
+                    <a href="../libraries/advantages.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Advantage
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="libraries/libraries-and-twig.html">
+            
+                
+                    <a href="../libraries/libraries-and-twig.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Attach a library in Twig
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="libraries/core-libraries.html">
+            
+                
+                    <a href="../libraries/core-libraries.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        Core libraries
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="javascript/index.html">
+            
+                
+                    <a href="../javascript/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Javascript
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="javascript/file-closure.html">
+            
+                
+                    <a href="../javascript/file-closure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        File Closure
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="javascript/eshint.html">
+            
+            <span><b>9.2.</b> ESHint</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="javascript/jquery.html">
+            
+                
+                    <a href="../javascript/jquery.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        jQuery
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="javascript/multilingual.html">
+            
+                
+                    <a href="../javascript/multilingual.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        Multilingual in Javascript
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="javascript/theme-function.html">
+            
+                
+                    <a href="../javascript/theme-function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        Theme function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="javascript/behaviors.html">
+            
+                
+                    <a href="../javascript/behaviors.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.6.</b>
+                        
+                        Drupal Behaviors
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="custom-theme/index.html">
+            
+                
+                    <a href="../custom-theme/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Custom theme
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="custom-theme/theme-directory.html">
+            
+                
+                    <a href="../custom-theme/theme-directory.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        The /themes directory
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="custom-theme/info-file.html">
+            
+                
+                    <a href="../custom-theme/info-file.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        Creating an info file
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="breakpoint-images/index.html">
+            
+                
+                    <a href="../breakpoint-images/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Breakpoints
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="breakpoint-images/breakpoints.html">
+            
+                
+                    <a href="../breakpoint-images/breakpoints.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        Breakpoints
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="breakpoint-images/responsive-images.html">
+            
+                
+                    <a href="../breakpoint-images/responsive-images.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        Responsive Images
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >The Drupal 8 Theming Guide</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="twig-basics">Twig basics</h2>
+<h3 id="twig-autoescape-enabled">Twig autoescape enabled</h3>
+<blockquote>
+<p>To escape a string means to reduce ambiguous characters in a string.</p>
+</blockquote>
+<p><a href="https://www.drupal.org/node/2296163" target="_blank">Twig autoescape is enabled</a> by default. This means that every string printed from a Twig template (anything between <code>{{ }}</code>) gets <em>escaped</em>.</p>
+<h3 id="printing-a-variable">Printing a variable</h3>
+<p>To print a variable in a template, use <code>{{ variable }}</code>, eg. <code>{{ foo }}</code></p>
+<p>A dot (<code>.</code>) can be used to access attributes of a variable:</p>
+<pre><code>{{ foo.bar }}
+</code></pre><blockquote>
+<p>   Twig will automatically check for the following options:</p>
+</blockquote>
+<pre><code>// Array key.
+$foo[&apos;bar&apos;];
+// Object property.
+$foo-&gt;bar;
+// Object method.
+$foo-&gt;bar();
+// Object get method convention.
+$foo-&gt;getBar();
+// Object is method convention.
+$foo-&gt;isBar();
+// Object dynamic object property is set and get property.
+`$foo-&gt;__isset(&apos;bar&apos;);`
+`$foo-&gt;__get(&apos;bar&apos;);`
+</code></pre><p><em>PHP</em></p>
+<pre><code>$awesome_array = array(
+  &apos;a_key&apos; =&gt; &apos;a_value&apos;,
+  &apos;another_key&apos; =&gt; array(
+    &apos;foo&apos; =&gt; &apos;bar&apos;,
+  ),
+);
+</code></pre><p><em>Twig</em></p>
+<pre><code>{{ awesome_array.a_key }} # returns &apos;a_value&apos;
+{{ awesome_array.another_key.foo }} # returns &apos;bar&apos;
+</code></pre><h3 id="twig-filters">Twig filters</h3>
+<p>It&apos;s possible to let the variable go through a filter before printing it. This can be done using <code>{{ variable|filter }}</code>.</p>
+<h4 id="twig-filters">Twig filters</h4>
+<p>Here are some example of filters from the Twig engine.</p>
+<ul>
+<li><code>|length</code>, returns the number of items of a sequence or mapping, or the length of a string.</li>
+<li><code>|lower</code>, converts a value to lowercase.</li>
+<li><code>|upper</code>, converts a value to uppercase.</li>
+<li>&#x2026;</li>
+</ul>
+<p>A complete list of default Twig filters <a href="http://twig.sensiolabs.org/doc/filters/index.html" target="_blank">can be found here</a>.</p>
+<h4 id="drupal-filters">Drupal filters</h4>
+<p>Drupal offers some additional filters.</p>
+<h5 id="translation-filters">Translation filters</h5>
+<ul>
+<li><p><code>t</code> will run the variable through the Drupal <code>t()</code> function, which will return a translated string. An example:
+<a href="%7B%7B%20url(%27%3Cfront%3E%27)%20%7D%7D" title="{{ &apos;Home&apos;|t }}" rel="home" class="site-logo"></a></p>
+</li>
+<li><p><code>passthrough</code></p>
+</li>
+<li><code>placeholder</code></li>
+</ul>
+<p>To safely escape all of the Twig variables detected in a <code>{% trans %}</code> tag, the variables are sent with an <code>@</code> prefix by default. To pass-through a variable (<strong>!</strong>) or use as a placeholder (<strong>%</strong>), the <code>passthrough</code> or <code>placeholder</code> filters are used.</p>
+<ul>
+<li><strong>passthrough</strong> gets no sanitization or formatting and should only be used for text that has already been prepared for HTML display.</li>
+<li><p><strong>placeholder</strong> gets escaped to HTML and formatted using <a href="https://api.drupal.org/api/drupal/core%21includes%21bootstrap.inc/function/drupal_placeholder/8" target="_blank">drupal_placeholder()</a>, which makes it display as <em>emphasized</em> text.</p>
+</li>
+<li><p><code>raw</code> will show the raw data (meaning without any escaping).</p>
+</li>
+</ul>
+<h5 id="replace-twig-s-escape-filter-with-our-own">Replace twig&apos;s escape filter with our own.</h5>
+<ul>
+<li><code>drupal_escape</code> is a replacement function for Twig&apos;s escape filter. See <a href="https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Template!TwigExtension.php/function/TwigExtension%3A%3AescapeFilter/8" target="_blank">TwigExtension::escapeFilter</a></li>
+</ul>
+<h5 id="implements-safe-joining">Implements safe joining.</h5>
+<ul>
+<li><code>safe_join</code> to safely joins several strings together. See <a href="https://api.drupal.org/api/drupal/core%21themes%21engines%21twig%21twig.engine/function/twig_drupal_join_filter/8" target="_blank">twig_drupal_join_filter</a></li>
+</ul>
+<h5 id="array-filters">Array filters</h5>
+<ul>
+<li><code>without</code> creates a copy of the renderable array and removes child elements by key specified through filter&apos;s arguments. The copy can be printed without these elements. The original renderable array is still available and can be used to print child elements in their entirety in the twig template.</li>
+</ul>
+<h5 id="css-class-and-id-filters">CSS class and ID filters.</h5>
+<ul>
+<li><code>clean_class</code> prepares a string for use as a valid HTML class name. <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Component%21Utility%21Html.php/function/Html%3A%3AgetClass/8" target="_blank">From Html::getClass</a></li>
+<li><code>clean_id</code> prepares a string for use as a valid HTML ID. <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Component%21Utility%21Html.php/function/Html%3A%3AgetId/8" target="_blank">From Html::getId</a></li>
+</ul>
+<h4 id="translations">Translations</h4>
+<p>The Twig i18n extension allows marking parts of a template as translatable. Let&apos;s start of with an easy example:</p>
+<p>  <code>{% trans %} Hello world {% endtrans %}</code></p>
+<p>It&apos;s possible to embed a variable in a translatable string, using the <code>{{ variable }}</code> syntax.</p>
+<p>  <code>{% trans %} Hello {{ name }} {% endtrans %}</code></p>
+<p>To apply a filter to a variable, used in a translatable block you first need to assign the result to a variable.</p>
+<pre><code>{% set name = name|capitalize %}
+
+{% trans %}
+  Hello {{ name }}!
+{% endtrans %}
+</code></pre><p>A translatable string can be pluralized. Implementing a <code>{% plural ... %}</code> switch makes this possible.</p>
+<pre><code>{% trans %}
+  Hello star.
+{% plural count %}
+  Hello {{ count }} stars.
+{% endtrans %}
+</code></pre><h4 id="comments">Comments</h4>
+<p><code>{# Comments go inside these brackets. #}</code></p>
+<h4 id="functions">Functions</h4>
+<p>An <code>if</code> function.</p>
+<pre><code>{% if site_slogan %}
+  &lt;div class=&quot;site-slogan&quot;&gt;{{ site_slogan }}&lt;/div&gt;
+{% endif %}
+</code></pre><h4 id="loops">Loops</h4>
+<p>A <code>for</code> function. The output for this is <code>0, 1, 2, 3</code>.</p>
+<blockquote>
+<p>The <code>range</code> function returns a list containing an arithmetic progression of integers.</p>
+</blockquote>
+<pre><code>{% for i in range(0, 3) %}
+  {{ i }},
+{% endfor %}
+</code></pre><p>Another example, from the <code>field--node--title.html.twig</code> template:</p>
+<pre><code>{% for item in items %}
+  {{ item.content }}
+{% endfor %}
+</code></pre><p>Inside of a for loop block you can access some special variables.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>items.index</td>
+<td>The current iteration of the loop. (1 indexed)</td>
+</tr>
+<tr>
+<td>items.index0</td>
+<td>The current iteration of the loop. (0 indexed)</td>
+</tr>
+<tr>
+<td>items.revindex</td>
+<td>The number of iterations from the end of the loop (1 indexed)</td>
+</tr>
+<tr>
+<td>items.revindex0</td>
+<td>The number of iterations from the end of the loop (0 indexed)</td>
+</tr>
+<tr>
+<td>items.first</td>
+<td><code>True</code> if first iteration</td>
+</tr>
+<tr>
+<td>items.last</td>
+<td><code>True</code> if last iteration</td>
+</tr>
+<tr>
+<td>items.length</td>
+<td>The number of items in the sequence</td>
+</tr>
+<tr>
+<td>items.parent</td>
+<td>The parent context</td>
+</tr>
+</tbody>
+</table>
+<p>A replacement block can be rendered if no iteration took place (because the sequence was empty). This can be done by using <code>else</code>.</p>
+<pre><code>&lt;ul&gt;
+{% for user in users %}
+  &lt;li&gt;{{ user.username|e }}&lt;/li&gt;
+{% else %}
+  &lt;li&gt;&lt;em&gt;no user found&lt;/em&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;
+</code></pre><h4 id="create-a-twig-variable">Create a Twig variable</h4>
+<p>Sometimes it might be useful to define variables in a template file. <code>{% set foo=&quot;bar&quot; %}</code> declares a variable <code>foo</code> and assigns the value <code>bar</code> to it. Later in the template, the variable can be printed out using <code>{{ foo }}</code>.</p>
+<pre><code>example.twig.php
+---
+
+{% set foo=&quot;bar&quot; %}
+
+# Other code here
+
+Hi, here&apos;s my variable: {{ foo }}
+</code></pre><p>The variable can be a single value, as mentioned in the example above, but it can also be an array:</p>
+<pre><code>another_example.twig.php
+---
+
+{%
+  set foo_array = [
+    &apos;foo&apos;,
+    &apos;bar&apos;,
+  ]
+%}
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../twig/index.html" class="navigation navigation-prev " aria-label="Previous page: Twig"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../twig/twig-debug.html" class="navigation navigation-next " aria-label="Next page: Twig debug"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
