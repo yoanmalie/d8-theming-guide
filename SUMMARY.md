@@ -33,7 +33,7 @@
 * [Javascript](javascript/README.md)
   * [File Closure](javascript/file-closure.md)
   * [Use strict](javascript/file-closure.md)
-  * [ESHint](javascript/eshint.md)
+  * [ESLint](javascript/eslint.md)
   * [jQuery](javascript/jquery.md)
   * [Multilingual in Javascript](javascript/multilingual.md)
   * [Theme function](javascript/theme-function.md)
