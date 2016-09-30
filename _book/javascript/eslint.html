@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>History of libraries | The Drupal 8 Theming Guide</title>
+        <title>ESLint | The Drupal 8 Theming Guide</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../libraries/advantages.html" />
+    <link rel="next" href="../javascript/jquery.html" />
     
     
-    <link rel="prev" href="../libraries/index.html" />
+    <link rel="prev" href="../javascript/file-closure.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="8.1" data-basepath=".." data-revision="Fri Sep 30 2016 11:26:36 GMT+0100 (IST)">
+    <div class="book" data-level="9.2" data-basepath=".." data-revision="Fri Sep 30 2016 11:26:36 GMT+0100 (IST)">
     
 
 <div class="book-summary">
@@ -528,7 +528,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="8.1" data-path="libraries/history.html">
+        <li class="chapter " data-level="8.1" data-path="libraries/history.html">
             
                 
                     <a href="../libraries/history.html">
@@ -624,7 +624,7 @@
             
         </li>
     
-        <li class="chapter " data-level="9.2" data-path="javascript/eslint.html">
+        <li class="chapter active" data-level="9.2" data-path="javascript/eslint.html">
             
                 
                     <a href="../javascript/eslint.html">
@@ -912,47 +912,11 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="the-history-of-libraries-part-1">The history of libraries, part 1</h2>
-<p>During the early development of Drupal 8, assets such as javascript and stylesheets had their own, different way of getting imported into themes. Importing a custom javascript file was done using the <code>scripts</code> property inside the <code>.info.yml</code>-file of the theme. To import stylesheets, the <code>stylesheets</code> property was used. This was more or less the way it was done in Drupal 7. Here is an example from a Drupal 7 <code>theme.info</code> file.</p>
-<pre><code>...
-
-# Adding stylesheets
-stylesheets[all][] = css/styles.css
-stylesheets[print][] = css/print.css
-
-# Adding javascript files
-scripts[] = js/script.js
-
-...
-</code></pre><p>An alternative path was chosen. Javascript maintainer <strong>_nod</strong> created an issue on <a href="https://www.drupal.org/node/1542344" target="_blank">using AMD for JS architecture</a>. The patch for the issue became so big that a separate issue was created. This issue handled the splitting up of the dependencies. This patch, <a href="https://www.drupal.org/node/1737148" target="_blank">Explicitly declare all JS dependencies, don&apos;t use drupal_add_js</a>, where all javascript files are declared as libraries and added the relevant dependencies to the scripts, got committed about two weeks after the creation. The original issue [<strong>AMD architecture</strong>] however was posponed to a later Drupal release (Drupal 9.x).</p>
-<h2 id="-libraries-yml">{}.libraries.yml</h2>
-<p>During the early stages of Drupal 8, this was done using <code>hook_library_info</code>. Since this was one of the last remaining hooks in Drupal 8, it got <a href="https://www.drupal.org/node/2201089" target="_blank">replaced by a <code>*.libraries.yml</code> file</a>). This means modules, themes and profiles can define their own <code>*.libraries.yml</code> file. The file should be in the root directory of the theme (or module).</p>
-<pre><code># example.libraries.yml
-
-base:
-  version: 1.x
-  js:
-    js/scripts.js: {}
-  css:
-    component:
-      css/components/component.css: {}
-  dependencies:
-    - core/drupal
-    - core/jquery
-</code></pre><p>Inside the <code>.info.yml</code> file from a module or theme, the library can be included using the <code>libraries</code> property.</p>
-<pre><code># example.info.yml
-
-libraries:
-  - example/base
-</code></pre><p>The <em>example</em> theme now has a global dependency on the <code>base</code> library (from the <em>example</em> theme/module); <code>example/base</code>. Therefor it&apos;s included on <strong>every page</strong> (where this theme is loaded). The <code>base</code> library itself contains a single javascript file (<code>scripts.js</code>), a css file (categoried as a component) and has dependencies on the <code>drupal</code> and <code>jquery</code> library from core (read more on this in the <strong>Javascript</strong> chapter).</p>
-<h2 id="the-history-of-libraries-part-2">The history of libraries, part 2</h2>
-<p>Due to this change, the <code>scripts</code> tag from the <code>.info.yml</code>, was removed and replaced with the <code>libraries</code> property. This means scripts can only be included using the <code>libraries</code> property and a <code>libraries.yml</code> file. Stylesheets however (in themes) could still included using the old <code>stylesheets</code> property:</p>
-<p><strong>_nod</strong>:</p>
+                        <h2 id="eslint">ESLint</h2>
 <blockquote>
-<p>remove scripts[] from info files and replace it with library[] &#x2026;</p>
-<p>stylesheets[] can be kept as is, it&apos;s totally fair to add a single css file without dependencies. It&apos;s highly unlikely for scripts, they will need to depend on jquery, drupal.js 99% of the time.</p>
+<p>As of Drupal 8, we use ESLint to make sure our JavaScript code is consistent and free from syntax error and leaking variables and that it can be properly minified.</p>
 </blockquote>
-<p>It became clear this new way of adding assets had some major advantages. Wim Leers created a new issue stating <a href="https://www.drupal.org/node/2377397" target="_blank">Themes should use libraries, not individual stylesheets</a>. Due to the advantages pointed out in this issue, the <code>stylesheets</code> property from the <code>.info</code> file got removed. Thanks to this, there is now a unified way for adding assets libraries.</p>
+<p><a href="https://www.drupal.org/node/1955232" target="_blank">More on ESLint</a></p>
 
                     
                     </section>
@@ -963,10 +927,10 @@ libraries:
         </div>
 
         
-        <a href="../libraries/index.html" class="navigation navigation-prev " aria-label="Previous page: Libraries"><i class="fa fa-angle-left"></i></a>
+        <a href="../javascript/file-closure.html" class="navigation navigation-prev " aria-label="Previous page: File Closure"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../libraries/advantages.html" class="navigation navigation-next " aria-label="Next page: Advantage"><i class="fa fa-angle-right"></i></a>
+        <a href="../javascript/jquery.html" class="navigation navigation-next " aria-label="Next page: jQuery"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
