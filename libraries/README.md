@@ -8,7 +8,7 @@ Stylesheets that should be included on all pages are called globing styling. It'
 
 ## Global scripts
 
-Scripts that should be included on all pages are called globing scripts. It's considered a good practice to use `{theme}/globing-scrips` as a key for this sort of javascript.
+Scripts that should be included on all pages are called globing scripts. It's considered a good practice to use `{theme}/globing-scripts` as a key for this sort of javascript.
 
 > **NOTE:** Don't just include all your css or javascript files on every page!
 
